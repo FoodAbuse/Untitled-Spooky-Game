@@ -37,7 +37,7 @@ public class MovementStateManager : MonoBehaviour
 
         dir = transform.forward * vInput + transform.right * hzInput;
 
-        controller.Move(dir * moveSpeed * Time.deltaTime);
+        controller.Move(dir.normalized * moveSpeed * Time.deltaTime);
     }
 
     bool IsGrounded()
