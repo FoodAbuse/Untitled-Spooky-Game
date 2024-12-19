@@ -58,7 +58,11 @@ public class MovementStateManager : MonoBehaviour
     private void OnDrawGizmos() 
 
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(spherePos, controller.radius - 0.05f);
+        if(spherePos!=null && controller!=null) //avoids errors if references are missing
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(spherePos, controller.radius - 0.05f);
+        }
+        
     }
 }
