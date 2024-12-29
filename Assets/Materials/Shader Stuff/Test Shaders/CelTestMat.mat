@@ -48,21 +48,23 @@ Material:
     - _ADDITIONAL_LIGHTS: 1
     - _ADDITIONAL_LIGHT_SHADOWS: 1
     - _Ambient_Albedo: 1
-    - _EdgeDiffuse: 0.016
-    - _EdgeDistanceAttenuation: 0.349
-    - _EdgeRim: 0.632
-    - _EdgeRimOffset: 0.211
-    - _EdgeShadowAttenuation: 0.366
-    - _EdgeSpecular: 0.046
-    - _EdgeSpecularOffset: 0.1
+    - _DitherBrightness: 0
+    - _EdgeDiffuse: 0.605
+    - _EdgeDistanceAttenuation: 0.05
+    - _EdgeRim: 0.046
+    - _EdgeRimOffset: 1
+    - _EdgeShadowAttenuation: 1
+    - _EdgeSpecular: 0.125
+    - _EdgeSpecularOffset: 0.118
     - _MAIN_LIGHT_SHADOWS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RimThreshold: 0.258
+    - _RimThreshold: 0.036
     - _SHADOWS_SOFT: 1
-    - _Smoothness: 0.221
-    m_Colors: []
+    - _Smoothness: 0.754
+    m_Colors:
+    - _BaseColor: {r: 0.3647059, g: 0.48235294, b: 0.44346642, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5808033398878122622
 MonoBehaviour:
