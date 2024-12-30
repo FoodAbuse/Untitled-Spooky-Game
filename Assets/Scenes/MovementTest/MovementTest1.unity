@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 272776048}
   - component: {fileID: 272776054}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,6 +396,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 213103243}
+  - {fileID: 289581806}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -431,6 +432,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSense: 1
   camFollowPos: {fileID: 213103243}
+  anim: {fileID: 0}
+  vCam: {fileID: 0}
+  adsFov: 40
+  hipFov: 0
+  currentFov: 0
+  fovSmoothSpeed: 10
 --- !u!1 &289581803
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,6 +470,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSense: 1
   camFollowPos: {fileID: 213103243}
+  anim: {fileID: 0}
+  vCam: {fileID: 0}
+  adsFov: 40
+  hipFov: 0
+  currentFov: 0
+  fovSmoothSpeed: 10
 --- !u!114 &289581805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,13 +522,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289581803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.035, y: 2.926, z: -3.28}
+  m_LocalPosition: {x: -1.035, y: 0.8160002, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1655032678}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 272776052}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &557538226
 GameObject:
