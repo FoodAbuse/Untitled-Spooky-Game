@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,6 +175,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4601992614122945897, guid: f2fa94f8061d7bc43bb04184268d6514, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 084cfeea41f21514b81684730ad70a6f, type: 2}
+    - target: {fileID: -4601992614122945897, guid: f2fa94f8061d7bc43bb04184268d6514, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f090303beeee9b469acb706e9661366, type: 2}
     - target: {fileID: 919132149155446097, guid: f2fa94f8061d7bc43bb04184268d6514, type: 3}
       propertyPath: m_Name
       value: Kachujin G Rosales
@@ -211,8 +219,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.96260643, g: 0.8392157, b: 1, a: 1}
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2764,8 +2772,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 084cfeea41f21514b81684730ad70a6f, type: 2}
-  - {fileID: 2100000, guid: 7f090303beeee9b469acb706e9661366, type: 2}
+  - {fileID: 2100000, guid: 884492b84a78cdc4eb5e8c3796341bd1, type: 2}
+  - {fileID: 2100000, guid: 2fb7df70b16243c489e1ac2931fc8d9b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
