@@ -14,9 +14,13 @@ public class MovementStateManager : MonoBehaviour
 
     [HideInInspector] public Animator anim;
 
-    public float movespeed = 3;
+    public float currentMoveSpeed;
+    public float walkSpeed = 3, walkBackSpeed = 2;
+    public float runSpeed = 7, runBackSpeed = 5;
+    public float crouchSpeed = 2, crouchBackSpeed = 1;
+
     [HideInInspector] public Vector3 dir;
-    float hzInput, vInput;
+    [HideInInspector] public float hzInput, vInput;
     CharacterController controller;
 
     [SerializeField] float groundYOffset;
@@ -29,7 +33,7 @@ public class MovementStateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController>(); 
         SwitchState(Idle);
     }
@@ -59,7 +63,7 @@ public class MovementStateManager : MonoBehaviour
        
         dir = transform.forward * vInput + transform.right * hzInput;
 
-        controller.Move(dir.normalized * movespeed * Time.deltaTime);
+        controller.Move(dir.normalized * currentMoveSpeed * Time.deltaTime);
     }
 
     bool IsGrounded()
