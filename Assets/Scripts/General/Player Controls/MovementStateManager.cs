@@ -17,6 +17,11 @@ public class MovementStateManager : MonoBehaviour
     [SerializeField] float gravity = -9.81f;
     Vector3 velocity;
 
+    //audio
+    void Awake()
+    {
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +33,22 @@ public class MovementStateManager : MonoBehaviour
     {
         GetDirectionAndMove();
         Gravity();
+
+        //audio test - it works - can call this function in the relevant scripts
+        //atm 
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            AudioManager.Instance.PlaySoundEffect("PhoneMenuExit", 0.6f, 1f);
+        }
+
+        //random pitch test
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            float randomPitchTest = Random.Range(0.8f, 1.2f);
+            AudioManager.Instance.PlaySoundEffect("PhoneMenuExit", 0.6f, randomPitchTest);
+        }
+        
     }
 
     void GetDirectionAndMove()
