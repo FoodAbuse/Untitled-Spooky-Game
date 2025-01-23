@@ -267,7 +267,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTrasnform: {fileID: 0}
-  cameraFollowSpeed: 0.2
+  cameraPivot: {fileID: 1242706365}
+  cameraTransform: {fileID: 0}
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 129
+  cameraCollisionOffset: 0.2
+  minimumCollisionOffset: 0.2
+  cameraCollisionRadius: 0.2
+  cameraFollowSpeed: 0.15
+  cameraLookSpeed: 0.5
+  cameraPivotSpeed: 0.5
+  lookAngnle: 0
+  pivotAngle: 0
+  minimumPivot: -35
+  maximumPivot: 35
 --- !u!1 &1052162848
 GameObject:
   m_ObjectHideFlags: 0
