@@ -10,7 +10,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     Vector3 moveDirection;
     Transform cameraObject;
-    Rigidbody playerRigidbody;
+    public Rigidbody playerRigidbody;
 
     [Header("Falling")]
     public float inAirTimer;
@@ -23,12 +23,17 @@ public class PlayerLocomotion : MonoBehaviour
     [Header("Movement Flags")]
     public bool isSprinting;
     public bool isGrounded;
+    public bool isJumping;
 
     [Header("Movement Speeds")]
     public float walkingSpeed = 1.5f;
     public float runningSpeed = 5;
     public float sprintingSpeed = 7;
     public float rotationSpeed = 15;
+
+    [Header("Jumping Speeds")]
+    public float gravityIntensity = -9.8f;
+    public float jumpingHeight = 1.5f;
 
     private void Awake()
     {
@@ -52,10 +57,13 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void HandleMovement()
     {
-        moveDirection = cameraObject.forward * inputManager.verticalInput;
-        moveDirection = moveDirection + cameraObject.right * inputManager.horizontalInput;
-        moveDirection.Normalize();
-        moveDirection.y = 0;
+        if (isJumping)
+            return;
+
+            moveDirection = cameraObject.forward * inputManager.verticalInput;
+            moveDirection = moveDirection + cameraObject.right * inputManager.horizontalInput;
+            moveDirection.Normalize();
+            moveDirection.y = 0;
 
         if (isSprinting)
         {
@@ -74,12 +82,18 @@ public class PlayerLocomotion : MonoBehaviour
         }
         moveDirection = moveDirection * runningSpeed;
 
+        if(isGrounded && !isJumping)
+        {
         Vector3 movementVelocity = moveDirection;
         playerRigidbody.velocity = movementVelocity;
+        }
     }
 
     private void HandleRotations()
     {
+        if (isJumping)
+            return;
+
         Vector3 targetDirection = Vector3.zero;
 
         targetDirection = cameraObject.forward * inputManager.verticalInput;
@@ -95,34 +109,43 @@ public class PlayerLocomotion : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
         Quaternion playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-        transform.rotation = playerRotation;
+        if (isGrounded && !isJumping)
+        {
+            transform.rotation = playerRotation;
+        }
+        
     }
 
     private void HandleFallingAndLanding()
     {
         RaycastHit hit;
         Vector3 rayCastOrigin = transform.position;
+        Vector3 targetPosition;
         rayCastOrigin.y = rayCastOrigin.y + rayCastHeightOffSet;
+        targetPosition = transform.position;
 
-        if (!isGrounded)
+        if (!isGrounded && !isJumping)
         {
             if (!playerManager.isInteracting)
             {
                 animatorManager.PlayerTargetedAnimation("FallingIdle", true);
             }
 
+            animatorManager.animator.SetBool("isUsingRootMotion", false);
             inAirTimer = inAirTimer + Time.deltaTime;
             playerRigidbody.AddForce(transform.forward * leapingVelocity);
             playerRigidbody.AddForce(-Vector3.up * fallingVelocity * inAirTimer);
         }
 
-        if (Physics.SphereCast(rayCastOrigin, 0.2f, -Vector3.up, out hit, groundLayer))
+        if (Physics.SphereCast(rayCastOrigin, 0.1f, -Vector3.up, out hit, groundLayer))
         {
             if(!isGrounded && !playerManager.isInteracting)
             {
                 animatorManager.PlayerTargetedAnimation("Landing", true);
             }
 
+            Vector3 rayCastHitPoint = hit.point;
+            targetPosition.y = rayCastHitPoint.y;
             inAirTimer = 0;
             isGrounded = true;
         }
@@ -130,6 +153,42 @@ public class PlayerLocomotion : MonoBehaviour
         {
             isGrounded = false;
         }
+
+        if(isGrounded && !isJumping)
+        {
+            if(playerManager.isInteracting || inputManager.moveAmount > 0)
+            {
+                transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime / 0.1f);
+            }
+            else
+            {
+                transform.position = targetPosition;
+            }
+        }
+
+        
+    }
+
+    public void HandleJumping()
+    {
+        if (isGrounded)
+        {
+            animatorManager.animator.SetBool("isJumping", true);
+            animatorManager.PlayerTargetedAnimation("Jumping", false);
+
+            float jumpingVelocity = Mathf.Sqrt(-2 * gravityIntensity * jumpingHeight);
+            Vector3 playerVelocity = moveDirection;
+            playerVelocity.y = jumpingVelocity;
+            playerRigidbody.velocity = playerVelocity;
+        }
+    }
+
+    public void HandleDodge()
+    {
+        if (playerManager.isInteracting)
+            return;
+
+        animatorManager.PlayerTargetedAnimation("Dodge", true, true);
     }
 
 }

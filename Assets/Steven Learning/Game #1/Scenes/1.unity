@@ -176,7 +176,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a47ac0b35b05de74caa22899bc3d6974, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -215,8 +215,8 @@ Transform:
   m_GameObject: {fileID: 607285822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -274,10 +274,10 @@ MonoBehaviour:
     m_Bits: 129
   cameraCollisionOffset: 0.2
   minimumCollisionOffset: 0.2
-  cameraCollisionRadius: 0.2
+  cameraCollisionRadius: 2
   cameraFollowSpeed: 0.15
-  cameraLookSpeed: 0.5
-  cameraPivotSpeed: 0.5
+  cameraLookSpeed: 0.25
+  cameraPivotSpeed: 0.25
   lookAngnle: 0
   pivotAngle: 0
   minimumPivot: -35
@@ -639,8 +639,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 239bb21131888104c8f0188de2fa9d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 7
+  playerRigidbody: {fileID: 0}
+  inAirTimer: 0
+  leapingVelocity: 3
+  fallingVelocity: 33
+  rayCastHeightOffSet: 0.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  isSprinting: 0
+  isGrounded: 1
+  isJumping: 0
+  walkingSpeed: 1.5
+  runningSpeed: 2.5
+  sprintingSpeed: 5
   rotationSpeed: 15
+  gravityIntensity: -9.8
+  jumpingHeight: 1.5
 --- !u!114 &5755629715904859543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,6 +668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca35919e3fc99c640b1b9e01292c75e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteracting: 0
+  isUsingRootMotion: 0
 --- !u!136 &5755629715904859544
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -664,9 +681,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.25
-  m_Height: 1.8
+  m_Height: 1.7
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &5755629715904859545
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -695,3 +712,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1c0cc6b062b2e4587c457840587310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}

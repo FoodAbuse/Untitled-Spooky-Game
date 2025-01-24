@@ -5,7 +5,9 @@ using UnityEngine;
 public class AnimatorManager : MonoBehaviour
 {
 
-    Animator animator;
+    public Animator animator;
+    PlayerManager playerManager;
+    PlayerLocomotion playerLocomotion;
 
     int horizontal;
     int vertical;
@@ -13,6 +15,8 @@ public class AnimatorManager : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        playerManager = GetComponentInParent<PlayerManager>();
+        playerLocomotion = GetComponentInParent<PlayerLocomotion>();
         horizontal = Animator.StringToHash("Horizontal");
         vertical = Animator.StringToHash("Vertical");
     }
@@ -79,9 +83,23 @@ public class AnimatorManager : MonoBehaviour
         animator.SetFloat(vertical, snappedVertical, 0.1f, Time.deltaTime);
     }
 
-    public void PlayerTargetedAnimation(string targetAnimation, bool isInteracting)
+    public void PlayerTargetedAnimation(string targetAnimation, bool isInteracting, bool useRootMotion = false)
     {
         animator.SetBool("isInteracting", isInteracting);
+        animator.SetBool("isUsingRootMotion", useRootMotion);
         animator.CrossFade(targetAnimation, 0.2f);
+    }
+
+    private void OnAnimatorMove()
+    {
+        if (playerManager.isUsingRootMotion)
+        {
+            playerLocomotion.playerRigidbody.drag = 0;
+            Vector3 deltaPosition = animator.deltaPosition;
+            deltaPosition.y = 0;
+            Vector3 velocity = deltaPosition / Time.deltaTime;
+            playerLocomotion.playerRigidbody.velocity = velocity;
+        }
+            
     }
 }

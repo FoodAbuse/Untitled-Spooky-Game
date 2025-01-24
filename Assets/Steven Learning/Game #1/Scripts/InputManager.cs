@@ -20,6 +20,10 @@ public class InputManager : MonoBehaviour
 
     public bool shiftInput;
 
+    public bool jumpInput;
+
+    public bool dodgeInput;
+
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
@@ -36,6 +40,10 @@ public class InputManager : MonoBehaviour
 
             playerControls.PlayerActions.Shift.performed += i => shiftInput = true;
             playerControls.PlayerActions.Shift.canceled += i => shiftInput = false;
+
+            playerControls.PlayerActions.Jump.performed += i => jumpInput = true;
+
+            playerControls.PlayerActions.Dodge.performed += i => dodgeInput = true;
         }
 
         playerControls.Enable();
@@ -50,8 +58,8 @@ public class InputManager : MonoBehaviour
     {
         HandleMovementInput();
         HandleSprintingInput();
-        //HandleSprintInput();
-        //HandleJumpInput();
+        HandleJumpInput();
+        HandleDodgeInput();
         //HandleAttackInput();
         //HandleInteractInput();
     }
@@ -77,6 +85,24 @@ public class InputManager : MonoBehaviour
         else
         {
             playerLocomotion.isSprinting = false;
+        }
+    }
+
+    private void HandleJumpInput()
+    {
+        if (jumpInput)
+        {
+            jumpInput = false;
+            playerLocomotion.HandleJumping();
+        }
+    }
+
+    private void HandleDodgeInput()
+    {
+        if (dodgeInput)
+        {
+            dodgeInput = false;
+            playerLocomotion.HandleDodge();
         }
     }
 }

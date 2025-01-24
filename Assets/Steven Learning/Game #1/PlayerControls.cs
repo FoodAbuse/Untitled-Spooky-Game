@@ -237,6 +237,24 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""849b113f-0ee2-40e1-9c52-3af596dada97"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dodge"",
+                    ""type"": ""Button"",
+                    ""id"": ""f001cc09-0c02-4710-96df-d903571f3aba"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -261,6 +279,28 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Shift"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""773179b3-937e-4b10-845d-b111fceae659"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3de56db4-05e2-468e-836a-89fabfd30d10"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dodge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -274,6 +314,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         // Player Actions
         m_PlayerActions = asset.FindActionMap("Player Actions", throwIfNotFound: true);
         m_PlayerActions_Shift = m_PlayerActions.FindAction("Shift", throwIfNotFound: true);
+        m_PlayerActions_Jump = m_PlayerActions.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerActions_Dodge = m_PlayerActions.FindAction("Dodge", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -375,11 +417,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_PlayerActions;
     private IPlayerActionsActions m_PlayerActionsActionsCallbackInterface;
     private readonly InputAction m_PlayerActions_Shift;
+    private readonly InputAction m_PlayerActions_Jump;
+    private readonly InputAction m_PlayerActions_Dodge;
     public struct PlayerActionsActions
     {
         private @PlayerControls m_Wrapper;
         public PlayerActionsActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Shift => m_Wrapper.m_PlayerActions_Shift;
+        public InputAction @Jump => m_Wrapper.m_PlayerActions_Jump;
+        public InputAction @Dodge => m_Wrapper.m_PlayerActions_Dodge;
         public InputActionMap Get() { return m_Wrapper.m_PlayerActions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -392,6 +438,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Shift.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnShift;
                 @Shift.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnShift;
                 @Shift.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnShift;
+                @Jump.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnJump;
+                @Dodge.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnDodge;
+                @Dodge.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnDodge;
+                @Dodge.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnDodge;
             }
             m_Wrapper.m_PlayerActionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -399,6 +451,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Shift.started += instance.OnShift;
                 @Shift.performed += instance.OnShift;
                 @Shift.canceled += instance.OnShift;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+                @Dodge.started += instance.OnDodge;
+                @Dodge.performed += instance.OnDodge;
+                @Dodge.canceled += instance.OnDodge;
             }
         }
     }
@@ -411,5 +469,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     public interface IPlayerActionsActions
     {
         void OnShift(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnDodge(InputAction.CallbackContext context);
     }
 }
