@@ -9,5 +9,7 @@ public interface IInteractable
     bool MultipleUse { get; }
     bool IsInteractable { get; }
 
+    string TooltipMessage { get; }
+    string NotInteractableToolTipMessage { get; }
     void OnInteract();
 }

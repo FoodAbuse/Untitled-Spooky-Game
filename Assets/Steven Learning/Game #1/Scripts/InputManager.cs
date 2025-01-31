@@ -27,13 +27,21 @@ public class InputManager : MonoBehaviour
 
     public bool dodgeInput;
 
-    public bool interactInput;
+    public bool interactedInputClicked;
+    public bool interactedInputReleased;
+
+    #region Data
+
+        [SerializeField] InteractionInputData interactionInputData;
+
+    #endregion
 
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
         interactionController = Camera.main.transform.parent.parent.gameObject.GetComponent<InteractionController>();
+        interactionInputData.ResetInput();
     }
     private void OnEnable()
     {
@@ -51,8 +59,9 @@ public class InputManager : MonoBehaviour
 
             playerControls.PlayerActions.Dodge.performed += i => dodgeInput = true;
 
-            playerControls.PlayerActions.Interact.performed += i => interactInput = true;
-            playerControls.PlayerActions.Interact.canceled += i => interactInput = false;
+            //THIS FUNCTION IS DISABLED BECUASE IT'S NOT WOKRING AS INTENDED - THE PRESS INPUT WOULD TRIGGER TO MANY TIMES
+            playerControls.PlayerActions.Interact.performed += i => interactedInputClicked = true;
+            playerControls.PlayerActions.Interact.canceled += i => interactedInputReleased = true;
         }
 
         playerControls.Enable();
@@ -118,13 +127,25 @@ public class InputManager : MonoBehaviour
 
     private void HandleInteractInput()
     {
-        if (interactInput)
+        if (interactedInputClicked)
         {
             interactionController.isObjInteracting = true;
+            interactedInputClicked = false;
         }
-        else
+
+        if (interactedInputReleased)
         {
             interactionController.isObjInteracting = false;
+            interactedInputReleased = false;
         }
     }
+
+
+    // private void GetInteractionInputData()
+    // {
+    //     interactionInputData.InteractedClicked = Input.GetKeyDown(KeyCode.E);
+    //     Debug.Log("E Clicked" + interactionInputData.InteractedClicked);
+    //     interactionInputData.InteractedReleased = Input.GetKeyUp(KeyCode.E);
+    //     Debug.Log("E Released" + interactionInputData.InteractedReleased);
+    // }
 }

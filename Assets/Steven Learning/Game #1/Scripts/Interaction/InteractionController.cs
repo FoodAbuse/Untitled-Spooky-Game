@@ -10,8 +10,10 @@ public class InteractionController : MonoBehaviour
         [Header("Data")]
         public InteractionInputData interactionInputData;
         public InteractionData interactionData;
-        InputManager inputManager;
-        PlayerManager playerManager;
+        public InputManager inputManager;
+
+        [Space, Header("UI")]
+        [SerializeField] private InteractionUIPanel uIPanel;
 
         [Space]
         [Header("Ray Settings")]
@@ -60,18 +62,21 @@ public class InteractionController : MonoBehaviour
                     if(interactionData.IsEmpty())
                     {
                         interactionData.Interactable = _interactable;
+                        uIPanel.SetTooltip(_interactable.TooltipMessage);
                     }
                     else
                     {
                         if(!interactionData.IsSameInteractable(_interactable))
                         {
                             interactionData.Interactable = _interactable;
+                            uIPanel.SetTooltip(_interactable.TooltipMessage);
                         }
                     }
                 }
             }
             else
             {
+                uIPanel.RestUI();
                 interactionData.ResetData();
             }
 
@@ -82,15 +87,16 @@ public class InteractionController : MonoBehaviour
             if(interactionData.IsEmpty())
                 return;
 
-            if(isObjInteracting)
+            if(inputManager.interactedInputClicked)
             {
                 m_interacting = true;
                 m_holdTimer = 0f;
             }
-            else
+            if(inputManager.interactedInputReleased)
             {
                 m_interacting = false;
                 m_holdTimer = 0f;
+                uIPanel.UpdateProgressBar(0f);
             }
 
             if(m_interacting)
@@ -102,7 +108,10 @@ public class InteractionController : MonoBehaviour
                 {
                     m_holdTimer += Time.deltaTime;
 
-                    if(m_holdTimer >= interactionData.Interactable.HoldDuration)
+                    float heldPercent = m_holdTimer / interactionData.Interactable.HoldDuration;
+                    uIPanel.UpdateProgressBar(heldPercent);
+
+                    if(heldPercent > 1f)
                     {
                         interactionData.Interact();
                         m_interacting = false;
