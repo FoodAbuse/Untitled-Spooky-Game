@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     PlayerLocomotion playerLocomotion;
     CameraManager cameraManager;
     InputManager inputManager;
+    InteractionController interactionController;
 
     public bool isInteracting;
     public bool isUsingRootMotion;
@@ -18,6 +19,7 @@ public class PlayerManager : MonoBehaviour
         cameraManager = FindObjectOfType<CameraManager>();
         inputManager = GetComponent<InputManager>();
         animator = GetComponent<Animator>();
+        interactionController = GetComponent<InteractionController>();
     }
 
     private void Update()

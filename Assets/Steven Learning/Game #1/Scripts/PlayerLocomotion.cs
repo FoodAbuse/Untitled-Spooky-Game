@@ -191,4 +191,11 @@ public class PlayerLocomotion : MonoBehaviour
         animatorManager.PlayerTargetedAnimation("Dodge", true, true);
     }
 
+    public void HandleInteraction()
+    {
+        if (playerManager.isInteracting)
+            return;
+        
+    }
+
 }

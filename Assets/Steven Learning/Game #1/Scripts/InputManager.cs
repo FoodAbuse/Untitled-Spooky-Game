@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.InputSystem.Interactions;
 
 public class InputManager : MonoBehaviour
 {
     PlayerControls playerControls;
     PlayerLocomotion playerLocomotion;
     AnimatorManager animatorManager;
+    InteractionController interactionController;
 
     public Vector2 movementInput;
     public Vector2 cameraInput;
@@ -24,10 +27,13 @@ public class InputManager : MonoBehaviour
 
     public bool dodgeInput;
 
+    public bool interactInput;
+
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
+        interactionController = Camera.main.transform.parent.parent.gameObject.GetComponent<InteractionController>();
     }
     private void OnEnable()
     {
@@ -44,6 +50,9 @@ public class InputManager : MonoBehaviour
             playerControls.PlayerActions.Jump.performed += i => jumpInput = true;
 
             playerControls.PlayerActions.Dodge.performed += i => dodgeInput = true;
+
+            playerControls.PlayerActions.Interact.performed += i => interactInput = true;
+            playerControls.PlayerActions.Interact.canceled += i => interactInput = false;
         }
 
         playerControls.Enable();
@@ -60,8 +69,9 @@ public class InputManager : MonoBehaviour
         HandleSprintingInput();
         HandleJumpInput();
         HandleDodgeInput();
+        HandleInteractInput();
         //HandleAttackInput();
-        //HandleInteractInput();
+        
     }
 
     private void HandleMovementInput()
@@ -103,6 +113,18 @@ public class InputManager : MonoBehaviour
         {
             dodgeInput = false;
             playerLocomotion.HandleDodge();
+        }
+    }
+
+    private void HandleInteractInput()
+    {
+        if (interactInput)
+        {
+            interactionController.isObjInteracting = true;
+        }
+        else
+        {
+            interactionController.isObjInteracting = false;
         }
     }
 }
