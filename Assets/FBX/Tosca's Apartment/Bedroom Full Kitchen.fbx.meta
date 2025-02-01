@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: ed4b633c8358af249be26c0f2b53c1fe
+guid: 10940cd1be7743a45b4e68d09ff1c16a
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kitchen Mat
+    second: {fileID: 2100000, guid: dc1b93dde1251f445a5927cdfe21dd77, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -47,7 +52,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
