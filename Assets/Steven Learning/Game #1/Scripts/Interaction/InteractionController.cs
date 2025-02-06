@@ -31,6 +31,7 @@ public class InteractionController : MonoBehaviour
         private Camera m_cam;
         private bool m_interacting;
         private float m_holdTimer = 0f;
+        private InteractableBase _interactable;
     #endregion
 
     #region Built In Methods
@@ -55,7 +56,7 @@ public class InteractionController : MonoBehaviour
             bool _hitSomething = Physics.SphereCast(_ray, raySphereRadius, out _hitInfo, rayDistance, interactableLayer);
             if (_hitSomething)
             {
-                InteractableBase _interactable = _hitInfo.transform.GetComponent<InteractableBase>();
+                _interactable = _hitInfo.transform.GetComponent<InteractableBase>();
 
                 if(_interactable != null)
                 {
@@ -113,9 +114,19 @@ public class InteractionController : MonoBehaviour
 
                     if(heldPercent > 1f)
                     {
-                        interactionData.Interact();
-                        m_interacting = false;
+                        if(_interactable.interactionType == InteractableBase.InteractionType.Item)
+                        {
+                            interactionData.Interact(_interactable.GetComponent<ItemWorld>());
+                        }
+                        else
+                        {
+                            interactionData.Interact();
+                            m_interacting = false;
+                        }
+
+                         m_interacting = false;
                     }
+                    
                 }
                 else
                 {

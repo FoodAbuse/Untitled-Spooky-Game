@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    [SerializeField] private UIInventory uiInventory;
+
     Animator animator;
     PlayerLocomotion playerLocomotion;
     CameraManager cameraManager;
     InputManager inputManager;
+    Inventory inventory;
     InteractionController interactionController;
 
     public bool isInteracting;
@@ -20,6 +23,11 @@ public class PlayerManager : MonoBehaviour
         inputManager = GetComponent<InputManager>();
         animator = GetComponent<Animator>();
         interactionController = GetComponent<InteractionController>();
+
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
+
+        ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Item {itemType = Item.ItemType.Cube, itemAmount = 1});
     }
 
     private void Update()

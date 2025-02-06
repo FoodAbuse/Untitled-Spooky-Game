@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Interaction Data", menuName = "InteractionSystem/InteractionData")]
@@ -32,5 +34,11 @@ public class InteractionData : ScriptableObject
     public bool IsEmpty() 
     {
         return m_interactable == null;
+    }
+
+    public void Interact(ItemWorld itemWorld)
+    {   
+        itemWorld.GetItem();
+        itemWorld.DestroySelf();
     }
 }
