@@ -40,6 +40,10 @@ public class InteractableBase : MonoBehaviour, IInteractable
         {
             none, 
             Item,
+            //NPC,
+            //Enemy,
+            //Door,
+            //KeyItem,
         }
     #endregion
     

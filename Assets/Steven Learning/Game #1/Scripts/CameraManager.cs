@@ -24,10 +24,12 @@ public class CameraManager : MonoBehaviour
     public float cameraPivotSpeed = 2;
     
 
-    public float lookAngnle; //Camera looking up and down
+    public float lookAngle; //Camera looking up and down
     public float pivotAngle; //Camera looking left and right
     public float minimumPivot = -35;
     public float maximumPivot = 35;
+
+    public bool fixedCamera;
 
     private void Awake()
     {
@@ -54,25 +56,26 @@ public class CameraManager : MonoBehaviour
 
     private void RotateCamera()
     {
-        //this will rotate the camera
 
-        Vector3 rotation;
-        Quaternion targetRotation;
+        if (fixedCamera == false) 
+            {
+                Vector3 rotation;
+                Quaternion targetRotation;
 
-        lookAngnle = lookAngnle + (inputManager.cameraInputX * cameraLookSpeed);
-        pivotAngle = pivotAngle - (inputManager.cameraInputY * cameraPivotSpeed);  
-        pivotAngle = Mathf.Clamp(pivotAngle, minimumPivot, maximumPivot);
+                lookAngle = lookAngle + (inputManager.cameraInputX * cameraLookSpeed);
+                pivotAngle = pivotAngle - (inputManager.cameraInputY * cameraPivotSpeed);  
+                pivotAngle = Mathf.Clamp(pivotAngle, minimumPivot, maximumPivot);
 
-        rotation = Vector3.zero;
-        rotation.y = lookAngnle;
-        targetRotation = Quaternion.Euler(rotation);
-        transform.rotation = targetRotation;
+                rotation = Vector3.zero;
+                rotation.y = lookAngle;
+                targetRotation = Quaternion.Euler(rotation);
+                transform.rotation = targetRotation;
 
-        rotation = Vector3.zero;
-        rotation.x = pivotAngle;
-        targetRotation = Quaternion.Euler(rotation);
-        cameraPivot.localRotation = targetRotation;
-
+                rotation = Vector3.zero;
+                rotation.x = pivotAngle;
+                targetRotation = Quaternion.Euler(rotation);
+                cameraPivot.localRotation = targetRotation;
+            }
     }
 
     private void HandleCameraCollisions()
