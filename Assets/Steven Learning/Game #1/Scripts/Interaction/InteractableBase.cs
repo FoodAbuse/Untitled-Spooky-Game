@@ -33,5 +33,18 @@ public class InteractableBase : MonoBehaviour, IInteractable
         Debug.Log("Interacted: " + gameObject.name);
     }
     #endregion
+
+    #region Enum
+        public InteractionType interactionType;
+        public enum InteractionType
+        {
+            none, 
+            Item,
+            //NPC,
+            //Enemy,
+            //Door,
+            //KeyItem,
+        }
+    #endregion
     
 }
