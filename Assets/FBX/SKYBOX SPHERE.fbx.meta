@@ -1,34 +1,9 @@
 fileFormatVersion: 2
-guid: d811f73e5c85a66489bd92546fd79a00
+guid: 7db5c3d73f6aa3242a49a69102300778
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_1_Skin
-    second: {fileID: 2100000, guid: 9d6015d5a5a40274898dd25907386640, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_2_Clothes
-    second: {fileID: 2100000, guid: 69e52edcb9f930547b1f0424dd219212, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_3_Wings
-    second: {fileID: 2100000, guid: f24be7c2a9b057c419f1745897ec8d7a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_4_Eyes
-    second: {fileID: 2100000, guid: 872fe8c407974d24ab80728e68a8531a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_5_Mouth
-    second: {fileID: 2100000, guid: f8006a9a297e4e847826f7e32ca75c08, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -60,7 +35,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 24
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -114,7 +89,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.24
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
