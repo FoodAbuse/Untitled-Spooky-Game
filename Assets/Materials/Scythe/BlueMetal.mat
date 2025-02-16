@@ -30,8 +30,14 @@ Material:
     m_Ints: []
     m_Floats:
     - _EdgeDiffuse: 0.03
-    - _RimThreshold: 0.095
-    - _Smoothness: 0.879
+    - _EdgeDistanceAttenuation: 0
+    - _EdgeRim: 0.416
+    - _EdgeRimOffset: 0.155
+    - _EdgeShadowAttenuation: 0.204
+    - _EdgeSpecular: 0.535
+    - _EdgeSpecularOffset: 0.584
+    - _RimThreshold: 0
+    - _Smoothness: 1
     m_Colors:
     - _BaseColor: {r: 0.60717124, g: 0.71721506, b: 0.8203767, a: 1}
     - _Color: {r: 0.60717124, g: 0.71721506, b: 0.8203767, a: 1}

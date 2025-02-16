@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8546367225687585345
+--- !u!1 &6190223392331181609
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8546367225687585344}
-  - component: {fileID: 8546367225687585346}
-  - component: {fileID: 8546367225687585347}
+  - component: {fileID: 3460681832720693723}
+  - component: {fileID: 157818755744665307}
+  - component: {fileID: 9038978367871316155}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: ScytheLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8546367225687585344
+--- !u!4 &3460681832720693723
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8546367225687585345}
+  m_GameObject: {fileID: 6190223392331181609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.298, y: 0.634, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,31 +33,31 @@ Transform:
   m_Father: {fileID: 8147137943957847311}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &8546367225687585346
+--- !u!108 &157818755744665307
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8546367225687585345}
+  m_GameObject: {fileID: 6190223392331181609}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.972549, b: 0.25882354, a: 1}
   m_Intensity: 0.24
-  m_Range: 1
+  m_Range: 2
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.05
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -95,13 +95,13 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &8546367225687585347
+--- !u!114 &9038978367871316155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8546367225687585345}
+  m_GameObject: {fileID: 6190223392331181609}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
@@ -126,6 +126,8 @@ GameObject:
   - component: {fileID: 8147137943957847311}
   - component: {fileID: 5097979525132300970}
   - component: {fileID: 7015304300686034528}
+  - component: {fileID: 6607267116946739913}
+  - component: {fileID: 7141531088011262441}
   - component: {fileID: 5224230149113892435}
   m_Layer: 0
   m_Name: Scythe
@@ -146,9 +148,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 8546367225687585344}
+  - {fileID: 3460681832720693723}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &5097979525132300970
 MeshFilter:
@@ -204,6 +206,46 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6607267116946739913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8816819262917633973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 246eddca9549f954296541a1c42094b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequencyBand: 2
+  audioBrain: {fileID: 0}
+  liveValue: 0
+--- !u!114 &7141531088011262441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8816819262917633973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49de68fdca000b748bf8b0a612369412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listener: {fileID: 0}
+  lowValColour: {r: 0.85882354, g: 1, b: 0, a: 1}
+  highValColour: {r: 1, g: 0.972549, b: 0.30588236, a: 1}
+  lowValEmission: 0.35
+  highValEmission: 1
+  lowLightValue: 0.1
+  highLightValue: 1
+  liveColor: {r: 0, g: 0, b: 0, a: 0}
+  liveEmissionValue: 0
+  liveLightValue: 0
+  liveValue: 0
+  materialIndex: 2
+  pointLight: {fileID: 157818755744665307}
 --- !u!95 &5224230149113892435
 Animator:
   serializedVersion: 4
