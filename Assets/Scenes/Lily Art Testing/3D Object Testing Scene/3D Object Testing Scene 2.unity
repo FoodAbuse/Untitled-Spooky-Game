@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.6544144, g: 0.73414505, b: 0.8113208, a: 1}
   m_FogMode: 2
-  m_FogDensity: 0.33
+  m_FogDensity: 0.27
   m_LinearFogStart: 52.96
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -1488,7 +1488,6 @@ Transform:
   - {fileID: 1645774277}
   - {fileID: 1623457504}
   - {fileID: 942702194}
-  - {fileID: 819669124}
   - {fileID: 1536411817}
   - {fileID: 1152169931}
   m_Father: {fileID: 0}
@@ -11513,7 +11512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &819669122
 AudioListener:
   m_ObjectHideFlags: 0
@@ -11572,14 +11571,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819669121}
-  m_LocalRotation: {x: 0.13044722, y: 0.032551713, z: -0.0074989744, w: 0.99089235}
-  m_LocalPosition: {x: -0.265, y: 1.591, z: -4.08}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.10995722, y: -0.7372879, z: -0.6555939, w: 0.12046909}
+  m_LocalPosition: {x: 0.014097676, y: -0.047621995, z: 0.014840494}
+  m_LocalScale: {x: 0.010000001, y: 0.01, z: 0.009999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 100999569}
+  m_Father: {fileID: 1645774277}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 15.011, y: 3.713, z: -0.378}
+  m_LocalEulerAnglesHint: {x: 250.09, y: 70.911, z: 109.954}
 --- !u!114 &819669125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17362,7 +17361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7623284883224913889, guid: 4e681cc0c16582946ac229daba65db52, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8255558707270468758, guid: 4e681cc0c16582946ac229daba65db52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30798,27 +30797,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3a91dfac4dd51840b8f4f57373f5c0f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 11.959667
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3a91dfac4dd51840b8f4f57373f5c0f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.5445406
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3a91dfac4dd51840b8f4f57373f5c0f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.5445406
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3a91dfac4dd51840b8f4f57373f5c0f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.4510827
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3a91dfac4dd51840b8f4f57373f5c0f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.4510827
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3a91dfac4dd51840b8f4f57373f5c0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3a91dfac4dd51840b8f4f57373f5c0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -30826,7 +30825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3a91dfac4dd51840b8f4f57373f5c0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 79.275
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: d3a91dfac4dd51840b8f4f57373f5c0f, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -30853,7 +30852,10 @@ PrefabInstance:
       value: Toska placeholder rescaled
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d3a91dfac4dd51840b8f4f57373f5c0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 819669124}
   m_SourcePrefab: {fileID: 100100000, guid: d3a91dfac4dd51840b8f4f57373f5c0f, type: 3}
 --- !u!4 &1645774277 stripped
 Transform:
