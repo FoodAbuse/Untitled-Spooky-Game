@@ -130,8 +130,18 @@ public class InteractionController : MonoBehaviour
                 }
                 else
                 {
-                    interactionData.Interact();
+                    if(_interactable.interactionType == InteractableBase.InteractionType.Item)
+                        {
+                            interactionData.Interact(_interactable.GetComponent<ItemWorld>());
+                        }
+                    else
+                        {
+                            interactionData.Interact();
+                            m_interacting = false;
+                        }
+
                     m_interacting = false;
+                    
                 }
             }
         }
