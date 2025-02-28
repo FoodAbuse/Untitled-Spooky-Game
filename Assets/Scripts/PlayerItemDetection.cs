@@ -11,6 +11,8 @@ public class PlayerItemDetection : MonoBehaviour
 
     [SerializeField]
     private CapsuleCollider col;
+    [SerializeField]
+    private HugoMovementTests playerScript;
 
     private void Start() 
     {
@@ -18,7 +20,9 @@ public class PlayerItemDetection : MonoBehaviour
         {
             col = gameObject.GetComponent<CapsuleCollider>();
             col.radius = 0;
-        }    
+        }
+        playerScript = gameObject.transform.GetComponentInParent<HugoMovementTests>(); 
+
     }
 
     private void Update() 
