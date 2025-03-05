@@ -67,6 +67,12 @@ public class HugoMovementTests : MonoBehaviour
     private Transform stareTarget;
 
 
+    [SerializeField]
+    private enum AnimationState{IndoorSleepy = 0, Indoor = 1, Outdoor = 2}
+
+    private AnimationState animationState = new AnimationState();
+
+
     private void OnEnable()
     {
         playerControls.Enable();
@@ -155,6 +161,8 @@ public class HugoMovementTests : MonoBehaviour
             }
             
         }
+
+
     }
 
 
@@ -170,5 +178,23 @@ public class HugoMovementTests : MonoBehaviour
     private void VerifyNextStare()
     {
         
+    }
+
+    public void SwapAnimState(int index)
+    {
+        // if (index == ((int)AnimationState.IndoorSleepy))
+        // {
+        //     animationState = AnimationState.IndoorSleepy;
+        // }
+        // if (index == ((int)AnimationState.Indoor))
+        // {
+        //     animationState = AnimationState.Indoor;
+        // }
+        // if (index == ((int)AnimationState.Outdoor))
+        // {
+        //     animationState = AnimationState.Outdoor;
+        // }
+
+        // Recieve animation string instead, set this as a global event in game manager that changes multiple values
     }
 }
