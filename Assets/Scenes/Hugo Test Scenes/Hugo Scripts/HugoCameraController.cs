@@ -39,7 +39,8 @@ public class HugoCameraController : MonoBehaviour
             Vector3 relativePosition = playerTransform.position - cameraRotationTransform.position;
             Quaternion targetRotation = Quaternion.LookRotation(relativePosition, Vector3.up);
 
-            cameraTransform.position = new Vector3(cameraTransform.position.x, cameraTransform.position.y, playerTransform.position.z);
+            //cameraTransform.position = new Vector3(cameraTransform.position.x, cameraTransform.position.y, playerTransform.position.z);
+            cameraTransform.position = new Vector3(playerTransform.position.x, cameraTransform.position.y, playerTransform.position.z);
             cameraRotationTransform.rotation = Quaternion.Lerp(cameraRotationTransform.rotation, targetRotation, Time.deltaTime * cameraSwivelSpeed);
         }
     }
