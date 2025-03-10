@@ -52,7 +52,7 @@ MonoBehaviour:
     m_Value: 10
   intensity:
     m_OverrideState: 1
-    m_Value: 0.02
+    m_Value: 0.015
   response:
     m_OverrideState: 0
     m_Value: 0.8
@@ -139,4 +139,4 @@ MonoBehaviour:
     m_Value: {fileID: 2800000, guid: 5294a2a729b7c974fad9715472409cc5, type: 3}
   contribution:
     m_OverrideState: 1
-    m_Value: 0.33
+    m_Value: 0.263
