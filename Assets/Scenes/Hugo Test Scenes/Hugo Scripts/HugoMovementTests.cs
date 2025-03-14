@@ -49,6 +49,9 @@ public class HugoMovementTests : MonoBehaviour
     [SerializeField]
     private Transform playerHeadJoint;
 
+    [SerializeField]
+    private bool isOutside;
+
     private Rigidbody rb;
 
     [Space(10)]
@@ -86,6 +89,14 @@ public class HugoMovementTests : MonoBehaviour
     void Start() 
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        if (isOutside)
+        {
+             gameObject.GetComponentInChildren<Animator>().SetBool("IsOutside", true);
+        }
+        else
+        {
+             gameObject.GetComponentInChildren<Animator>().SetBool("IsOutside", false);
+        }
     }
     void Update()
     {
