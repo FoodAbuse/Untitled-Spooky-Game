@@ -21,6 +21,9 @@ public class HugoMovementTests : MonoBehaviour
     private float maxSpeed;
     [SerializeField]
     private float rotationSpeed = 1f;
+
+    [SerializeField]
+    private float sprintMultiplier = 1.5f;
     public bool canMove;
 
     private float horizontalInput;
@@ -109,15 +112,33 @@ public class HugoMovementTests : MonoBehaviour
 
             moveDirection = new Vector3(playerControls.ReadValue<Vector2>().x, 0, playerControls.ReadValue<Vector2>().y);
 
+
+
             if (playerControls.ReadValue<Vector2>().x != 0 || playerControls.ReadValue<Vector2>().y != 0)
             {
-                if (activeSpeed < maxSpeed)
+                float speedMultiplier = 1f;
+                float targetSpeed = 1f;
+                if (Keyboard.current[Key.LeftShift].isPressed)
+                {
+                    speedMultiplier = sprintMultiplier;
+                    gameObject.GetComponentInChildren<Animator>().SetBool("IsSprinting", true);
+                }
+                else 
+                {
+                    speedMultiplier = 1f;
+                    gameObject.GetComponentInChildren<Animator>().SetBool("IsSprinting", false);
+                }
+
+                targetSpeed = (speedMultiplier * maxSpeed);
+                
+
+                if (activeSpeed < targetSpeed)
                 {
                     activeSpeed = activeSpeed + accelerationSpeed * Time.deltaTime;
                 }
                 else
                 {
-                    activeSpeed = maxSpeed;
+                    activeSpeed = targetSpeed;
                 }
                 
                 
@@ -127,7 +148,7 @@ public class HugoMovementTests : MonoBehaviour
                 activeSpeed = 0;
             }
             //moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
-
+            
             //transform.position += moveDirection * movementSpeed * Time.deltaTime;
             transform.Translate(moveDirection * activeSpeed * Time.deltaTime, Space.World);
 
