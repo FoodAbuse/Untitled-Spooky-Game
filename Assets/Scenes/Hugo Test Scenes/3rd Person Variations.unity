@@ -3111,10 +3111,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeSpeed: 0
   animSpeedMultiplier: 1.3
+  runAnimSpeed: 1.3
+  walkAnimSpeed: 1.3
   accelerationSpeed: 2
   maxSpeed: 1
   rotationSpeed: 360
-  sprintMultiplier: 1.5
+  sprintMultiplier: 4
   canMove: 1
   horizontalBearing: 0
   movementAnimThreshold: 0.01

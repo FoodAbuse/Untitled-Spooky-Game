@@ -16,6 +16,10 @@ public class HugoMovementTests : MonoBehaviour
     [SerializeField]
     private float animSpeedMultiplier;
     [SerializeField]
+    private float runAnimSpeed = 1f;
+    [SerializeField]
+    private float walkAnimSpeed = 1f;
+    [SerializeField]
     private float accelerationSpeed;
     [SerializeField]
     private float maxSpeed;
@@ -121,12 +125,16 @@ public class HugoMovementTests : MonoBehaviour
                 if (Keyboard.current[Key.LeftShift].isPressed)
                 {
                     speedMultiplier = sprintMultiplier;
+                    accelerationSpeed = sprintMultiplier * 2;
                     gameObject.GetComponentInChildren<Animator>().SetBool("IsSprinting", true);
+                    animSpeedMultiplier = runAnimSpeed;
                 }
                 else 
                 {
                     speedMultiplier = 1f;
+                    accelerationSpeed = 2;
                     gameObject.GetComponentInChildren<Animator>().SetBool("IsSprinting", false);
+                    animSpeedMultiplier = walkAnimSpeed;
                 }
 
                 targetSpeed = (speedMultiplier * maxSpeed);
