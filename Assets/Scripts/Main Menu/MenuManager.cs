@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class MenuManager : MonoBehaviour
 {
@@ -20,17 +21,39 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     private Button loadSaveButton;
 
+    PlayerControls playerControls;
+
+    [SerializeField]
+    private bool isAnyKeyPressed = false;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // Check for saves, set validSave true if found
         VerifyLoadableSave();
+        playerControls = new PlayerControls();
+
+    }
+
+    private void OnEnable() 
+    {
+        playerControls.Enable();
+    }
+    private void OnDisable() 
+    {
+        playerControls.Disable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.anyKeyDown)
+
+        if (!isAnyKeyPressed)
+        {
+            isAnyKeyPressed = playerControls.PlayerMovement.AnyKey.ReadValue<float>() > 0.1f;
+        } 
+
+        if(isAnyKeyPressed)
         {
             ProgressToTitle();
         }
