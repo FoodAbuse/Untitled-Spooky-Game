@@ -121,16 +121,17 @@ Material:
     - _DitherBrightness: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
-    - _EdgeDiffuse: 0.01
+    - _EdgeDiffuse: 0.07
     - _EdgeDistanceAttenuation: 0.777
-    - _EdgeRim: 0.58
-    - _EdgeRimOffset: 0.5
+    - _EdgeRim: 0.622
+    - _EdgeRimOffset: 0.016
     - _EdgeShadowAttenuation: 0.5
     - _EdgeSpecular: 0.5
     - _EdgeSpecularOffset: 0.5
     - _Emission: 0
     - _EmissionStrength: 0
     - _Emission_1: 0
+    - _Emission_Strength: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.4472136
