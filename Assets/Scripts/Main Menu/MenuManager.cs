@@ -21,7 +21,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     private Button loadSaveButton;
 
-    PlayerControls playerControls;
+    //PlayerControls playerControls;
 
     [SerializeField]
     private bool isAnyKeyPressed = false;
@@ -31,17 +31,17 @@ public class MenuManager : MonoBehaviour
     {
         // Check for saves, set validSave true if found
         VerifyLoadableSave();
-        playerControls = new PlayerControls();
+        //playerControls = new PlayerControls();
 
     }
 
     private void OnEnable() 
     {
-        playerControls.Enable();
+        //playerControls.Enable();
     }
     private void OnDisable() 
     {
-        playerControls.Disable();
+        //playerControls.Disable();
     }
 
     // Update is called once per frame
@@ -50,7 +50,7 @@ public class MenuManager : MonoBehaviour
 
         if (!isAnyKeyPressed)
         {
-            isAnyKeyPressed = playerControls.PlayerMovement.AnyKey.ReadValue<float>() > 0.1f;
+            //isAnyKeyPressed = playerControls.PlayerMovement.AnyKey.ReadValue<float>() > 0.1f;
         } 
 
         if(isAnyKeyPressed)
