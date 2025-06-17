@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.7529412, g: 0.8845886, b: 0.99215686, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.1
@@ -11913,9 +11913,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeSpeed: 0
   animSpeedMultiplier: 1.3
+  runAnimSpeed: 1
+  walkAnimSpeed: 1
   accelerationSpeed: 2
   maxSpeed: 7
   rotationSpeed: 360
+  sprintMultiplier: 1.5
   canMove: 1
   horizontalBearing: 0
   movementAnimThreshold: 0.01
