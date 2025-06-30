@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NATURE Weeds Dandelion blown
+  m_Name: NATURE Weeds Grass A
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,21 +20,17 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1533739134, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - time: 0.28333333
-      value: {fileID: -199079256, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - time: 0.56666666
-      value: {fileID: -125837119, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - time: 0.8
-      value: {fileID: 1084651173, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - time: 1.0666667
-      value: {fileID: -1797564500, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - time: 1.3666667
-      value: {fileID: 1100330094, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - time: 1.65
-      value: {fileID: 1533739134, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - time: 1.9833333
-      value: {fileID: 1533739134, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
+      value: {fileID: -99079111, guid: 7bb566e022059c7499704672bb548764, type: 3}
+    - time: 0.25
+      value: {fileID: -573909423, guid: 7bb566e022059c7499704672bb548764, type: 3}
+    - time: 0.48333332
+      value: {fileID: 1531779087, guid: 7bb566e022059c7499704672bb548764, type: 3}
+    - time: 0.71666664
+      value: {fileID: -488877206, guid: 7bb566e022059c7499704672bb548764, type: 3}
+    - time: 0.95
+      value: {fileID: -1541262687, guid: 7bb566e022059c7499704672bb548764, type: 3}
+    - time: 1.2
+      value: {fileID: -1541262687, guid: 7bb566e022059c7499704672bb548764, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -55,20 +51,18 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
     pptrCurveMapping:
-    - {fileID: 1533739134, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - {fileID: -199079256, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - {fileID: -125837119, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - {fileID: 1084651173, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - {fileID: -1797564500, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - {fileID: 1100330094, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - {fileID: 1533739134, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
-    - {fileID: 1533739134, guid: 18aac095ecd8ece49844d5ebf724b9f5, type: 3}
+    - {fileID: -99079111, guid: 7bb566e022059c7499704672bb548764, type: 3}
+    - {fileID: -573909423, guid: 7bb566e022059c7499704672bb548764, type: 3}
+    - {fileID: 1531779087, guid: 7bb566e022059c7499704672bb548764, type: 3}
+    - {fileID: -488877206, guid: 7bb566e022059c7499704672bb548764, type: 3}
+    - {fileID: -1541262687, guid: 7bb566e022059c7499704672bb548764, type: 3}
+    - {fileID: -1541262687, guid: 7bb566e022059c7499704672bb548764, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2
+    m_StopTime: 1.2166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
