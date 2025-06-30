@@ -2681,10 +2681,7 @@ Transform:
   m_LocalPosition: {x: 21.901436, y: 0.384, z: 14.85169}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1120450561}
-  - {fileID: 1146904642}
-  - {fileID: 3081920222741146973}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6438,11 +6435,6 @@ Transform:
   m_Father: {fileID: 909868494}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1120450561 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-  m_PrefabInstance: {fileID: 8483985145401052185}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1138154229
 GameObject:
   m_ObjectHideFlags: 0
@@ -6475,11 +6467,6 @@ Transform:
   m_Father: {fileID: 2085706311}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1146904642 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-  m_PrefabInstance: {fileID: 6859915161385846696}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1152169929
 GameObject:
   m_ObjectHideFlags: 0
@@ -11177,6 +11164,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4611161170675537108, guid: 04f702a3f966821439ed69cb56130518, type: 3}
   m_PrefabInstance: {fileID: 2656905397667430797}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2218097077107259538
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2645173567718719098, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645173567718719098, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.0019999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645173567718719098, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645173567718719098, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.612999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645173567718719098, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645173567718719098, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645173567718719098, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645173567718719098, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645173567718719098, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645173567718719098, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645173567718719098, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750774559991354831, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678570585972251877, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
+      propertyPath: m_Name
+      value: NATURE Weeds Pokeweed Prefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: c0083a8fb75bc054e9b9ae76f3b56278, type: 3}
 --- !u!1001 &2218172553626296668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11366,6 +11416,69 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 04f702a3f966821439ed69cb56130518, type: 3}
+--- !u!1001 &2739234074389710353
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 737680172078229997, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 737680172078229997, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 737680172078229997, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 737680172078229997, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 737680172078229997, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 737680172078229997, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 737680172078229997, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 737680172078229997, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 737680172078229997, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 737680172078229997, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 737680172078229997, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739234075493383696, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.397
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449051634440356037, guid: 156f6de84c6278b41920253947753098, type: 3}
+      propertyPath: m_Name
+      value: NATURE Weeds Dandelion Prefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 156f6de84c6278b41920253947753098, type: 3}
 --- !u!1001 &3011536854696786294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11452,36 +11565,6 @@ Transform:
   m_Father: {fileID: 7074076444783827043}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3081920222741144226 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6820714915869298607, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-  m_PrefabInstance: {fileID: 8389399103650213133}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3081920222741146973 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-  m_PrefabInstance: {fileID: 8389399103650213133}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &3081920222741146976
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3081920222741144226}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8b6143b4627e9d244a1d55ff9ca60db9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &3174315851995302895 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3731287160616164497, guid: 11b6de9420b94e24b955e91c4aca0521, type: 3}
@@ -11879,6 +11962,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1459202879580192364, guid: 9412864a0438e9a4ea4b3efac992b0e1, type: 3}
   m_PrefabInstance: {fileID: 5891274517378099050}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5366785459303777499
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3516183276148094665, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_Name
+      value: NATURE Weeds Grass A Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909713659698828616, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909713659698828616, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909713659698828616, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909713659698828616, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.199999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909713659698828616, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909713659698828616, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909713659698828616, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909713659698828616, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909713659698828616, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909713659698828616, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909713659698828616, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366785458167932057, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366785458167932057, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.384
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366785458167932057, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 24a2307e1aa718846abf42b27b4d154d, type: 3}
 --- !u!4 &5492827424329326784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5084404002654742058, guid: 3a526fd9a018b6c4cab40d4fe7744cd0, type: 3}
@@ -12025,65 +12179,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f5ddda55d7b2ef946918d5d919294a0b, type: 3}
---- !u!1001 &6859915161385846696
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 533840885}
-    m_Modifications:
-    - target: {fileID: 6859915160247871381, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_Name
-      value: NATURE Weeds Grass A
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.8014355
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0059999824
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.20169067
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859915160247871466, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 27c7b171d7856ef458ae370c92afca46, type: 3}
 --- !u!4 &7074076444783827043
 Transform:
   m_ObjectHideFlags: 0
@@ -12200,134 +12295,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5367491386448165127, guid: 2ed5f2417c1448440b687ded0623f1e6, type: 3}
   m_PrefabInstance: {fileID: 4048783179862134671}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8389399103650213133
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 533840885}
-    m_Modifications:
-    - target: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -19.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820714915869294672, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6820714915869294674, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 3081920222741146976}
-    - target: {fileID: 6820714915869298607, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-      propertyPath: m_Name
-      value: NATURE Weeds Pokeweed
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6820714915869298606, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: e7ec14c4e65dff14aa146253b39d11ab, type: 3}
 --- !u!4 &8456782576754643215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3480795818519223881, guid: 37ca7ed965d33fb44aaf15b2f6f1df13, type: 3}
   m_PrefabInstance: {fileID: 4977255665806118726}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8483985145401052185
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 533840885}
-    m_Modifications:
-    - target: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483985146446001176, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483985146446003175, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
-      propertyPath: m_Name
-      value: NATURE Weeds Dandelion
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7f336609582ef2141a1dd4d2199a740c, type: 3}
 --- !u!1001 &8795676078233789479
 PrefabInstance:
   m_ObjectHideFlags: 0
