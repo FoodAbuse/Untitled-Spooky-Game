@@ -1,15 +1,22 @@
 using System.CodeDom.Compiler;
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour, IDamageable
 {
     [Header("Enemy Settings")]
-    public float health = 100f;
+    public float currentHealth = 100f;
+    [SerializeField]
+    private float maximumHealth = 100f;
     public float speed = 2f;
     public float attackDamage = 10f; // Damage dealt by the enemy
+
+    [SerializeField]
+    private Image healthBar;
 
     [Header("NavMesh Settings")]
     public NavMeshAgent navMeshAgent; // Reference to the NavMeshAgent component
@@ -28,8 +35,13 @@ public class Enemy : MonoBehaviour, IDamageable
     [Header("Enemy States")]
     public float sightRange, attackRange; // Ranges for sight and attack
     public bool playerInSightRange, playerInAttackRange; // Whether the player is in sight or attack range
-    
-        private void Update()
+
+    [Header("Debug Settings")]
+    [SerializeField]
+    private bool invokeDamage;
+    private int damageAmount = 10;
+
+    private void Update()
     {
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer); // Check if the player is in sight range
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer); // Check if the player is in attack range
@@ -37,12 +49,19 @@ public class Enemy : MonoBehaviour, IDamageable
         if (!playerInSightRange && !playerInAttackRange) Patroling(); // If the player is not in sight or attack range, patrol
         if (playerInSightRange && !playerInAttackRange) ChasePlayer(); // If the player is in sight range but not attack range, chase the player
         if (playerInAttackRange && playerInSightRange) AttackPlayer(); // If the player is in attack range and sight range, attack the player
+
+        if (invokeDamage)
+        {
+            TakeDamage(damageAmount);
+            invokeDamage = false;
+        }
     }
 
     private void Awake()
     {
         player = GameObject.Find("Player").transform; // Find the player object in the scene
         navMeshAgent = GetComponent<NavMeshAgent>(); // Get the NavMeshAgent component
+        currentHealth = maximumHealth;
     }
 
     private void Patroling()
@@ -80,8 +99,9 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void AttackPlayer()
     {
+        Vector3 lookTargetPos = new Vector3(player.position.x, this.transform.position.y, player.position.z);
         navMeshAgent.SetDestination(transform.position); // Stop moving towards the player
-        transform.LookAt(player); // Look at the player
+        transform.LookAt(lookTargetPos); // Look at the player
 
         if(!alreadyAttacked)// Attack(); // If the enemy hasn't attacked yet, attack the player
         {
@@ -119,11 +139,17 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damageAmount)
     {
-        health -= damageAmount;
-        if (health <= 0)
+        currentHealth -= damageAmount;
+        UpdateHealthbar();
+        if (currentHealth <= 0)
         {
             Die();
         }
+    }
+
+    private void UpdateHealthbar()
+    {
+        healthBar.fillAmount = (currentHealth / maximumHealth);
     }
 
     private void Die()
