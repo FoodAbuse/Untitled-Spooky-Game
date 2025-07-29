@@ -71,10 +71,17 @@ public class HugoMovementTests : MonoBehaviour
     [SerializeField]
     private float delayTimer;
 
+    private Camera MainCamera;
     [SerializeField]
     private  List<GameObject> interestingObjs;
     [SerializeField]
     private Transform stareTarget;
+    [Space(20)]
+    private bool interactableInRange;
+    [Header("Interactable Stuff")]
+    [SerializeField]
+    private List<HugoInteractable> interactablesInRange;
+    private int layer_mask;
 
 
     [SerializeField]
@@ -95,6 +102,8 @@ public class HugoMovementTests : MonoBehaviour
 
     void Start() 
     {
+        layer_mask = LayerMask.GetMask("Interactable");
+        MainCamera = Camera.main;
         rb = gameObject.GetComponent<Rigidbody>();
         if (isOutside)
         {
@@ -202,6 +211,25 @@ public class HugoMovementTests : MonoBehaviour
             
         }
 
+        // Interactable Stuff
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if(Physics.Raycast(ray, out hit, layer_mask))
+            {
+                Debug.Log(hit.collider.gameObject.name + " was clicked");
+                HugoInteractable target = hit.collider.gameObject.GetComponentInParent<HugoInteractable>();
+                if (target!=null)
+                {
+                    target.ObjectClicked(this);
+                }
+            }
+
+        }
+
 
     }
 
@@ -237,4 +265,17 @@ public class HugoMovementTests : MonoBehaviour
 
         // Recieve animation string instead, set this as a global event in game manager that changes multiple values
     }
+
+    public void PassInteractable(HugoInteractable i)
+    {
+        interactableInRange = true;
+        MainCamera = Camera.main; //ensure that we have a reference to the current camera 
+    }
+    public void CleanseInteractable(HugoInteractable i)
+    {
+        interactableInRange = false;
+
+    }
 }
+
+

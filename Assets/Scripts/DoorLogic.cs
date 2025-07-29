@@ -8,6 +8,9 @@ public class DoorLogic : MonoBehaviour
     private bool colliderTrigger;
     [SerializeField]
     private PlayerSpawnPoint definedPlayerSpawn;
+    [SerializeField]
+    private bool usesTrigger;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +20,14 @@ public class DoorLogic : MonoBehaviour
     private void OnTriggerEnter(Collider col)
     {
         HugoMovementTests p = col.GetComponent<HugoMovementTests>();
-        if (col.tag == "Player" && p!=null && colliderTrigger)
+        if (col.tag == "Player" && p!=null && colliderTrigger && usesTrigger)
         {
             definedPlayerSpawn.TeleportPlayer(col.gameObject);
         }
+    }
+
+    public void UseDoor(GameObject player)
+    {
+        definedPlayerSpawn.TeleportPlayer(player);
     }
 }

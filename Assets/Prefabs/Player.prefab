@@ -209,7 +209,7 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   playerHeadJoint: {fileID: 8320463921554604050}
-  isOutside: 0
+  isOutside: 1
   isStaring: 0
   stareDelay: 0
   delayTimer: 0
@@ -1177,23 +1177,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 767669378545728206, guid: b5d8feec599be704a82a18f8b1030097, type: 3}
   m_PrefabInstance: {fileID: 3766109674805950874}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9154182559139902376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4531931774859723604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f4ad281d2a40ec4f9089072c5755baa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  footstepAudios:
-  - {fileID: 4701923705028948522}
-  - {fileID: 2450262361694137146}
-  - {fileID: 1117361371878578358}
---- !u!82 &4701923705028948522
+--- !u!82 &1117361371878578358
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1203,7 +1187,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 59808987ebb18b34fa651ce9a76a215b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f781b4c4b254ebe4d84ac08fa745ae00, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1385,7 +1369,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &1117361371878578358
+--- !u!82 &4701923705028948522
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1395,7 +1379,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f781b4c4b254ebe4d84ac08fa745ae00, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 59808987ebb18b34fa651ce9a76a215b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1481,6 +1465,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9154182559139902376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4531931774859723604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f4ad281d2a40ec4f9089072c5755baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepAudios:
+  - {fileID: 4701923705028948522}
+  - {fileID: 2450262361694137146}
+  - {fileID: 1117361371878578358}
 --- !u!4 &8320463921554604050 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5132926075513289096, guid: b5d8feec599be704a82a18f8b1030097, type: 3}

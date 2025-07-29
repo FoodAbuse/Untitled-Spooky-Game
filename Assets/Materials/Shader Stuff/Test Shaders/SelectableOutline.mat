@@ -32,8 +32,8 @@ Material:
     - _Lerp: 0.5
     - _NOISE: 0
     - _Offset: 0.5
-    - _Outline: 0.0425
-    - _OutlineZ: -0.01
+    - _Outline: 0.033
+    - _OutlineZ: -0.0048
     m_Colors:
     - _OutlineColor: {r: 0.08627448, g: 0.972549, b: 0.6927523, a: 1}
   m_BuildTextureStacks: []
