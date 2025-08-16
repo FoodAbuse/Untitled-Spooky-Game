@@ -4993,6 +4993,10 @@ PrefabInstance:
       propertyPath: selectAt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6335994825234722892, guid: a1b06f504f1076b478122c5f4088d291, type: 3}
+      propertyPath: maxSelectionDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6335994825234723761, guid: a1b06f504f1076b478122c5f4088d291, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -6908,7 +6912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 2048
+  trigger: 8
   condition:
     luaConditions: []
     questConditions: []
@@ -7003,7 +7007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_overrideName: 
   m_overrideUseMessage: 
-  maxUseDistance: 30
+  maxUseDistance: 100
   events:
     onSelect:
       m_PersistentCalls:
