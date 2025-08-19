@@ -253,7 +253,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: aaaa
+        value: "(\u25DE\u2038\u25DF,)  sob... sob..."
         type: 0
         typeString: 
       - title: Sequence
@@ -308,7 +308,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: bbbb
+        value: h-hello? are you ok?
         type: 0
         typeString: 
       - title: Sequence
@@ -337,7 +337,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 169
-        y: 135
+        y: 133.96907
         width: 160
         height: 30
     - id: 6
@@ -363,7 +363,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: aaaaaa
+        value: oh! what are you doing here? i thought i was all alone...
         type: 0
         typeString: 
       - title: Sequence
@@ -418,7 +418,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: bbbbbb
+        value: sorry to intrude, i was returning my library book. what are you..
+          uh.. doing up there?
         type: 0
         typeString: 
       - title: Sequence
@@ -445,8 +446,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 24.74228}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 0, y: 21.386282}
+    canvasZoom: 0.94000006
   syncInfo:
     syncActors: 0
     syncItems: 0
