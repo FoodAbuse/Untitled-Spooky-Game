@@ -858,7 +858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4472791952732136056, guid: a6791e6f57fce4d409e13ca83e20604b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.497
+      value: 3.103
       objectReference: {fileID: 0}
     - target: {fileID: 4472791952732136056, guid: a6791e6f57fce4d409e13ca83e20604b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -866,7 +866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4472791952732136056, guid: a6791e6f57fce4d409e13ca83e20604b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.527
+      value: -7.49
       objectReference: {fileID: 0}
     - target: {fileID: 4472791952732136056, guid: a6791e6f57fce4d409e13ca83e20604b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12617,7 +12617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_overrideName: 
+  m_overrideName: Evelien
   m_overrideUseMessage: 
   maxUseDistance: 5
   events:
