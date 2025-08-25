@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: New Dialogue Database
+  m_Name: New Dialogue Database (Auto-Backup)
   m_EditorClassIdentifier: 
   version: 
   author: 
@@ -70,7 +70,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     portrait: {fileID: 0}
-    spritePortrait: {fileID: 21300000, guid: 22e5239ae6990f344b21207fdabcbf75, type: 3}
+    spritePortrait: {fileID: -1821911601, guid: 42e5e032dad86944383ba726f4471929, type: 3}
     alternatePortraits: []
     spritePortraits: []
   - id: 2
@@ -108,7 +108,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     portrait: {fileID: 0}
-    spritePortrait: {fileID: 21300000, guid: f65b941fc5c961c4da6e4818e3e9043b, type: 3}
+    spritePortrait: {fileID: 275999392, guid: 139f6aa9848b8f545982627725ace5cc, type: 3}
     alternatePortraits: []
     spritePortraits: []
   items: []
