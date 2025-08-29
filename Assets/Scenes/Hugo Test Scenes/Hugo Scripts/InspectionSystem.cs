@@ -5,7 +5,14 @@ using UnityEngine;
 public class InspectionSystem : MonoBehaviour
 {
     [SerializeField]
-    private Transform objectToInspect;
+    private Transform rotationTransform;
+
+    [SerializeField]
+    private GameObject itemToInspect;
+    [SerializeField]
+    private Vector3 itemScale;
+
+    private Quaternion rotationOffset;
 
     [SerializeField]
     private float rotationSpeed = 100f;
@@ -26,9 +33,19 @@ public class InspectionSystem : MonoBehaviour
 
     private void Start()
     {
-        if(objectToInspect != null)
+        if(rotationTransform != null)
         {
-            defaultRotation = objectToInspect.rotation;
+            defaultRotation = rotationTransform.rotation;
+            rotationOffset = rotationTransform.rotation;
+
+            rotationTransform.rotation = new Quaternion(0,0,0,0);
+            if(itemToInspect!=null)
+            {
+                Instantiate(itemToInspect, rotationTransform);
+                rotationTransform.rotation = rotationOffset;
+
+                rotationTransform.GetComponentInChildren<Transform>().localScale=itemScale;
+            }
         }
         else
         {
@@ -36,12 +53,14 @@ public class InspectionSystem : MonoBehaviour
             defaultRotation.y = 0;
             defaultRotation.z = 0;
         }
+
+       
     }
 
 
     void Update()
     {
-        if (objectToInspect != null)
+        if (rotationTransform != null)
         {
             
 
@@ -59,7 +78,7 @@ public class InspectionSystem : MonoBehaviour
                 float rotY = -deltaMousePos.x * rotationSpeed * Time.deltaTime;
 
                 Quaternion rot = Quaternion.Euler(rotX, rotY, 0);
-                objectToInspect.rotation = rot * objectToInspect.rotation;
+                rotationTransform.rotation = rot * rotationTransform.rotation;
 
                 previousMousePos = Input.mousePosition;
             }
@@ -74,7 +93,7 @@ public class InspectionSystem : MonoBehaviour
                 resetTimer += Time.deltaTime;
                 if(resetTimer >= resetDelay)
                 {
-                    if(objectToInspect.rotation == defaultRotation)
+                    if(rotationTransform.rotation == defaultRotation)
                     {
                         itemReleased = false;
                     }
@@ -89,6 +108,6 @@ public class InspectionSystem : MonoBehaviour
 
     public void SetBlendedRotation()
     {
-        objectToInspect.rotation = Quaternion.RotateTowards(objectToInspect.rotation, defaultRotation, resetSpeed * Time.deltaTime);
+        rotationTransform.rotation = Quaternion.RotateTowards(rotationTransform.rotation, defaultRotation, resetSpeed * Time.deltaTime);
     }
 }
