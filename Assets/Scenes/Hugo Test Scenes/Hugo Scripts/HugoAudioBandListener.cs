@@ -30,7 +30,12 @@ public class HugoAudioBandListener : MonoBehaviour
     float UpdateFrequencyValue()
     {
         int index = frequencyBand - 1;
-        float value = audioBrain.SendFreqValue(index);
+        float value = 0;
+        if (audioBrain!=null)
+        {
+            value = audioBrain.SendFreqValue(index);
+        }
+        
         return value;
     }
 
