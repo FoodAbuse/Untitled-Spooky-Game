@@ -163,6 +163,7 @@ public class HugoMovementTests : MonoBehaviour
             else
             {
                 activeSpeed = 0;
+                gameObject.GetComponentInChildren<Animator>().SetBool("IsSprinting", false);
             }
             //moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
             

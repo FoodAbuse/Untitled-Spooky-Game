@@ -173,6 +173,8 @@ MonoBehaviour:
   colliderTrigger: 1
   definedPlayerSpawn: {fileID: 368387150}
   usesTrigger: 0
+  loadsScene: 0
+  sceneIndex: 0
 --- !u!135 &76590375
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -958,6 +960,8 @@ MonoBehaviour:
   colliderTrigger: 1
   definedPlayerSpawn: {fileID: 2140592025}
   usesTrigger: 0
+  loadsScene: 1
+  sceneIndex: 1
 --- !u!135 &1943632787
 SphereCollider:
   m_ObjectHideFlags: 0
