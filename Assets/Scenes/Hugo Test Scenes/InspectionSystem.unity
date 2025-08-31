@@ -184,11 +184,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationTransform: {fileID: 46197310}
-  itemToInspect: {fileID: 8816819262917633973, guid: c9d58a4274731524e929500b02a03a68, type: 3}
-  itemScale: {x: 1, y: 1, z: 1}
+  itemToInspect: {fileID: 919020417445734664, guid: f89b169f36c9db341a13eb3f79089347, type: 3}
+  itemScale: {x: 10, y: 10, z: 10}
   rotationSpeed: 100
   resetSpeed: 100
-  resetDelay: 5
+  resetDelay: 2
   resetTimer: 0
   previousMousePos: {x: 0, y: 0, z: 0}
   defaultRotation: {x: 0, y: 0, z: 0, w: 0}
