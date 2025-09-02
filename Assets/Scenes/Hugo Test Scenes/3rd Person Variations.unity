@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.6186481, g: 0.58632964, b: 0.6792453, a: 1}
+  m_AmbientSkyColor: {r: 0.6976682, g: 0.7041035, b: 0.735849, a: 1}
   m_AmbientEquatorColor: {r: 0.03871484, g: 0.05427467, b: 0.09433961, a: 1}
   m_AmbientGroundColor: {r: 0.038204376, g: 0.05448028, b: 0.095307484, a: 1}
   m_AmbientIntensity: 1
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 9055f8282be1ad14091f3492baedb787, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -3383,7 +3383,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.20218587, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9893465, b: 0.8443396, a: 1}
   m_Intensity: 0.51
   m_Range: 15
   m_SpotAngle: 30
@@ -4524,7 +4524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1472318568
 Light:
   m_ObjectHideFlags: 0

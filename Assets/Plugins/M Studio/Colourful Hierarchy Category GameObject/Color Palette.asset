@@ -37,4 +37,4 @@ MonoBehaviour:
     textColor: {r: 0.17501779, g: 0.34429023, b: 0.6509434, a: 1}
     backgroundColor: {r: 0.9960785, g: 0.7803922, b: 0.9058824, a: 1}
     textAlignment: 4
-    fontStyle: 0
+    fontStyle: 1
