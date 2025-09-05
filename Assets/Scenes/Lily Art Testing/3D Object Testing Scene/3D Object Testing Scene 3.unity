@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.7529412, g: 0.8845886, b: 0.99215686, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.1
@@ -11981,6 +11981,7 @@ MonoBehaviour:
   delayTimer: 0
   interestingObjs: []
   stareTarget: {fileID: 0}
+  interactablesInRange: []
 --- !u!54 &2065580329
 Rigidbody:
   m_ObjectHideFlags: 0
