@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HugoCameraController : MonoBehaviour
 {
-    public enum CameraType{Static=0, Dynamic=1}
+    public enum CameraType{Static=0, Dynamic=1, Stationary=2}
 
     [SerializeField]
     private CameraType cameraType;
@@ -50,6 +50,12 @@ public class HugoCameraController : MonoBehaviour
 
             //cameraTransform.position = new Vector3(cameraTransform.position.x, cameraTransform.position.y, playerTransform.position.z);
             cameraTransform.position = new Vector3(playerTransform.position.x, cameraTransform.position.y, playerTransform.position.z);
+            cameraRotationTransform.rotation = Quaternion.Lerp(cameraRotationTransform.rotation, targetRotation, Time.deltaTime * cameraSwivelSpeed);
+        }
+        if(cameraType == CameraType.Stationary)
+        {
+            Vector3 relativePosition = playerTransform.position - cameraRotationTransform.position;
+            Quaternion targetRotation = Quaternion.LookRotation(relativePosition, Vector3.up);
             cameraRotationTransform.rotation = Quaternion.Lerp(cameraRotationTransform.rotation, targetRotation, Time.deltaTime * cameraSwivelSpeed);
         }
     }
