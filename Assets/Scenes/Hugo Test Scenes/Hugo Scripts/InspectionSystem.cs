@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class InspectionSystem : MonoBehaviour
 {
@@ -24,6 +26,11 @@ public class InspectionSystem : MonoBehaviour
     private float resetTimer = 0f;
 
     [SerializeField]
+    private GameObject canvasImage;
+    [SerializeField]
+    private GameObject canvasText;
+
+    [SerializeField]
     private Vector3 previousMousePos;
 
     [SerializeField]
@@ -31,7 +38,7 @@ public class InspectionSystem : MonoBehaviour
 
     public bool itemReleased = false;
 
-    private void Start()
+    private void Awake()
     {
         if(rotationTransform != null)
         {
@@ -43,8 +50,18 @@ public class InspectionSystem : MonoBehaviour
             {
                 Instantiate(itemToInspect, rotationTransform);
                 rotationTransform.rotation = rotationOffset;
-
+                
+                GameObject spawnedItem = rotationTransform.GetChild(0).gameObject;
+                
                 rotationTransform.GetComponentInChildren<Transform>().localScale=itemScale;
+                int layerInspection = LayerMask.NameToLayer("Inspection");
+                spawnedItem.layer = layerInspection;
+                foreach(Transform child in spawnedItem.transform.GetComponentInChildren<Transform>())
+                {
+                    child.gameObject.layer = layerInspection;
+                }
+                canvasImage.SetActive(true);
+                canvasText.GetComponent<TMPro.TextMeshProUGUI>().text = itemToInspect.name;
             }
         }
         else
@@ -103,6 +120,11 @@ public class InspectionSystem : MonoBehaviour
                     }
                 }
             }
+        }
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            canvasImage.SetActive(false);
+            gameObject.SetActive(false);            
         }
     }
 

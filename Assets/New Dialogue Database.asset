@@ -45,20 +45,8 @@ MonoBehaviour:
       value: '[]'
       type: 3
       typeString: CustomFieldType_Files
-    - title: BobaNeedSatisfied
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
     - title: IsPlayer
       value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: BobasServed
-      value: 1
-      type: 1
-      typeString: CustomFieldType_Number
-    - title: WaitingToBeServed
-      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: holdingItem
@@ -1091,8 +1079,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 614.2848}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.97
   syncInfo:
     syncActors: 0
     syncItems: 0

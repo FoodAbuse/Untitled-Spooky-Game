@@ -7525,6 +7525,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8885006232934442142, guid: 7424f75680fc71042af1630fc87a1bb2, type: 3}
+      propertyPath: cameraType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885006232934442142, guid: 7424f75680fc71042af1630fc87a1bb2, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 66148859}
