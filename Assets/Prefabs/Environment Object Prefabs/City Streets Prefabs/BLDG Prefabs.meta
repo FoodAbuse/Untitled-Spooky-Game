@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/John Test/Images.meta
+guid: a7166ba665e5c0e4f84534fa70b8ab73
+========
 guid: b5a7215d8c338f14faec3cabc41b3803
+>>>>>>>> af20ded4d84cfe10a3c14b43c61b6352df8fc45f:Assets/Prefabs/Environment Object Prefabs/City Streets Prefabs/BLDG Prefabs.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

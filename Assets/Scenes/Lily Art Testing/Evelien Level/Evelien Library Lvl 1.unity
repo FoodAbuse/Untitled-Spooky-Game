@@ -18340,6 +18340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraTriggerZone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2273784719030143593, guid: a3148495a77d8754fba5b24f91cfa795, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2273784719030143595, guid: a3148495a77d8754fba5b24f91cfa795, type: 3}
       propertyPath: m_Size.x
       value: 1.5949713
@@ -23872,6 +23876,10 @@ PrefabInstance:
     - target: {fileID: 2273784719030143593, guid: a3148495a77d8754fba5b24f91cfa795, type: 3}
       propertyPath: m_Name
       value: CameraTriggerZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273784719030143593, guid: a3148495a77d8754fba5b24f91cfa795, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2273784719030143595, guid: a3148495a77d8754fba5b24f91cfa795, type: 3}
       propertyPath: m_Size.x

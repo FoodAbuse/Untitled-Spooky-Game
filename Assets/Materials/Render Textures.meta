@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/UI Art/Hidden Messages.meta
+guid: 2a88ff6c34ac1d041a5ab09c262434cd
+========
 guid: 1d34da8e8048d114ea1faaaf44946a95
+>>>>>>>> af20ded4d84cfe10a3c14b43c61b6352df8fc45f:Assets/Materials/Render Textures.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
