@@ -42,6 +42,10 @@ public class PhoneUI : MonoBehaviour
     [SerializeField]
     private GameObject PictureWindow;
     [SerializeField]
+    private GameObject TrashText1Window;
+    [SerializeField]
+    private GameObject TrashText2Window;
+    [SerializeField]
     private GameObject DisablePictureWindow;
 
     [SerializeField]
@@ -62,6 +66,9 @@ public class PhoneUI : MonoBehaviour
     private AudioSource pauseAmbience;
 
     private AudioLowPassFilter lowPassFilter;
+
+    [SerializeField]
+    private AudioLowPassFilter ambienceLowPassFilter;
 
     [SerializeField]
     private AudioSource hoverSFX;
@@ -92,6 +99,8 @@ public class PhoneUI : MonoBehaviour
         TrashWindow.SetActive(false);
         VaultWindow.SetActive(false);
         PictureWindow.SetActive(false);
+        TrashText1Window.SetActive(false);
+        TrashText2Window.SetActive(false);
         DisableInteractionImage.SetActive(false);
 
         HiddenMessage1.SetActive(false);
@@ -130,6 +139,9 @@ public class PhoneUI : MonoBehaviour
         {
             lowPassFilter.enabled = false;
         }
+
+        ambienceLowPassFilter.enabled = false;
+
     }
 
     void Update()
@@ -266,6 +278,8 @@ public class PhoneUI : MonoBehaviour
         ExitMeowFolder();
         ExitMenu();
         ExitTrash();
+        ExitTrashText1();
+        ExitTrashText2();
         ExitVault();
         ExitPicture();
 
@@ -314,7 +328,11 @@ public class PhoneUI : MonoBehaviour
         MeowsWindow.SetActive(true);
         DisableInteractionImage.SetActive(true);
 
+        pauseAmbience.volume = 0.3f;
+
         clickSFX.Play();
+
+        ambienceLowPassFilter.enabled = true;
     }
 
     public void ExitMeowFolder()
@@ -323,7 +341,11 @@ public class PhoneUI : MonoBehaviour
         MeowsWindow.SetActive(false);
         DisableInteractionImage.SetActive(false);
 
+        ambienceLowPassFilter.enabled = false;
+
         clickSFX.Play();
+
+        pauseAmbience.volume = 0.55f;
 
         RectTransform exitMeowsRT = MeowsWindow.GetComponent<RectTransform>();
 
@@ -409,12 +431,51 @@ public class PhoneUI : MonoBehaviour
         exitTrashRT.anchoredPosition = Vector2.zero;
     }
 
+    public void TrashText1Button()
+    {
+        Debug.Log("Trash Text 1 Pressed");
+        TrashText1Window.SetActive(true);
+        //need to implement some way to disable the original trash interaction whilst this is active.
+        clickSFX.Play();
+    }
+
+    public void ExitTrashText1()
+    {
+        Debug.Log("Trash Text 1 Exited");
+        TrashText1Window.SetActive(false);
+
+        clickSFX.Play();
+
+        RectTransform exitTrashText1RT = TrashText1Window.GetComponent<RectTransform>();
+
+        exitTrashText1RT.anchoredPosition = new Vector2(68f, -108f);
+    }
+    public void TrashText2Button()
+    {
+        Debug.Log("Trash Text 2 Pressed");
+        TrashText2Window.SetActive(true);
+        //need to implement some way to disable the original trash interaction whilst this is active.
+        clickSFX.Play();
+    }
+
+    public void ExitTrashText2()
+    {
+        Debug.Log("Trash Text 2 Exited");
+        TrashText2Window.SetActive(false);
+
+        clickSFX.Play();
+
+        RectTransform exitTrashText2RT = TrashText2Window.GetComponent<RectTransform>();
+
+        exitTrashText2RT.anchoredPosition = new Vector2(135f, -34f);
+    }
+
     public void VaultButton()
     {
         Debug.Log("Vault Button Pressed");
         VaultWindow.SetActive(true);
         DisableInteractionImage.SetActive(true);
-        
+
         clickSFX.Play();
     }
 
