@@ -8,6 +8,8 @@ public class PhoneUI : MonoBehaviour
     [SerializeField]
     private GameObject volume;
     [SerializeField]
+    private GameObject unpausedVolume;
+    [SerializeField]
     private AudioSource openMenu;
     [SerializeField]
     private AudioSource openMenu2;
@@ -45,6 +47,8 @@ public class PhoneUI : MonoBehaviour
     private GameObject TrashText1Window;
     [SerializeField]
     private GameObject TrashText2Window;
+    [SerializeField]
+    private GameObject DisableTrashWindow;
     [SerializeField]
     private GameObject DisablePictureWindow;
 
@@ -222,6 +226,11 @@ public class PhoneUI : MonoBehaviour
         yield return null;
         glitchVideo1Object.SetActive(false);
 
+        if (unpausedVolume != null)
+        {
+            unpausedVolume.SetActive(false);
+        }
+
         volume.SetActive(true);
         UIWindow.SetActive(true);
         isPaused = true;
@@ -266,7 +275,14 @@ public class PhoneUI : MonoBehaviour
         glitchVideo2.frame = 0;
         glitchVideo2Object.SetActive(false);
 
+
         volume.SetActive(false);
+
+        if (unpausedVolume != null)
+        {
+            unpausedVolume.SetActive(true);
+        }
+
         isPaused = false;
         canUnpause = false;
         Time.timeScale = 1f;
@@ -423,6 +439,8 @@ public class PhoneUI : MonoBehaviour
         
         clickSFX.Play();
 
+        DisableTrashWindow.SetActive(false);
+
         HiddenMess.SetActive(false);
         HiddenMessage1.SetActive(false);
 
@@ -435,7 +453,9 @@ public class PhoneUI : MonoBehaviour
     {
         Debug.Log("Trash Text 1 Pressed");
         TrashText1Window.SetActive(true);
-        //need to implement some way to disable the original trash interaction whilst this is active.
+
+        DisableTrashWindow.SetActive(true);
+
         clickSFX.Play();
     }
 
@@ -443,6 +463,8 @@ public class PhoneUI : MonoBehaviour
     {
         Debug.Log("Trash Text 1 Exited");
         TrashText1Window.SetActive(false);
+
+        DisableTrashWindow.SetActive(false);
 
         clickSFX.Play();
 
@@ -454,7 +476,7 @@ public class PhoneUI : MonoBehaviour
     {
         Debug.Log("Trash Text 2 Pressed");
         TrashText2Window.SetActive(true);
-        //need to implement some way to disable the original trash interaction whilst this is active.
+        DisableTrashWindow.SetActive(true);
         clickSFX.Play();
     }
 
@@ -464,6 +486,8 @@ public class PhoneUI : MonoBehaviour
         TrashText2Window.SetActive(false);
 
         clickSFX.Play();
+        
+        DisableTrashWindow.SetActive(false);
 
         RectTransform exitTrashText2RT = TrashText2Window.GetComponent<RectTransform>();
 
