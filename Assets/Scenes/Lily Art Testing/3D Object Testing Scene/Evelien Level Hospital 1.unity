@@ -305,7 +305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &82438660
 Transform:
   m_ObjectHideFlags: 0
@@ -513,12 +513,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 194878181}
-  - component: {fileID: 194878180}
   - component: {fileID: 194878178}
-  - component: {fileID: 194878177}
   - component: {fileID: 194878176}
   - component: {fileID: 194878175}
   - component: {fileID: 194878174}
+  - component: {fileID: 194878182}
   m_Layer: 0
   m_Name: InteractionObject_Monitor
   m_TagString: Untagged
@@ -663,55 +662,6 @@ MonoBehaviour:
     onUse:
       m_PersistentCalls:
         m_Calls: []
---- !u!114 &194878177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194878173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 963d6358c55a0f44d8de57bee560f184, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useDefaultGUI: 1
-  guiSkin: {fileID: 0}
-  guiStyleName: label
-  alignment: 4
-  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  textStyle: 1
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  m_defaultUseMessage: press "E" to interact
-  useKey: 101
-  useButton: Fire2
-  enableTouch: 0
-  touchArea:
-    origin: 0
-    alignment: 0
-    x:
-      scale: 0
-      value: 0
-    y:
-      scale: 0
-      value: 0
-    width:
-      scale: 0
-      value: 0
-    height:
-      scale: 0
-      value: 0
-    minPixelWidth: 0
-    minPixelHeight: 0
-  broadcastToChildren: 1
-  actorTransform: {fileID: 0}
-  onSelectedUsable:
-    m_PersistentCalls:
-      m_Calls: []
-  onDeselectedUsable:
-    m_PersistentCalls:
-      m_Calls: []
-  usablesInRange: []
 --- !u!114 &194878178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,19 +676,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagSpecificElements: []
   layerSpecificElements: []
---- !u!65 &194878180
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194878173}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6031656, y: 1.7413117, z: 0.6069536}
-  m_Center: {x: 0.036729097, y: -0.37065595, z: -0.19652319}
 --- !u!4 &194878181
 Transform:
   m_ObjectHideFlags: 0
@@ -754,6 +691,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &194878182
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194878173}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.87113035
+  m_Center: {x: 0, y: -0.2764305, z: 0}
 --- !u!1 &216500266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5586,7 +5536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &259234326
 Transform:
   m_ObjectHideFlags: 0
@@ -5870,7 +5820,6 @@ GameObject:
   - component: {fileID: 376092234}
   - component: {fileID: 376092233}
   - component: {fileID: 376092232}
-  - component: {fileID: 376092231}
   - component: {fileID: 376092230}
   - component: {fileID: 376092229}
   - component: {fileID: 376092228}
@@ -6018,55 +5967,6 @@ MonoBehaviour:
     onUse:
       m_PersistentCalls:
         m_Calls: []
---- !u!114 &376092231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 376092227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 963d6358c55a0f44d8de57bee560f184, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useDefaultGUI: 1
-  guiSkin: {fileID: 0}
-  guiStyleName: label
-  alignment: 7
-  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  textStyle: 1
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  m_defaultUseMessage: press "E" to interact
-  useKey: 101
-  useButton: Fire2
-  enableTouch: 0
-  touchArea:
-    origin: 0
-    alignment: 0
-    x:
-      scale: 0
-      value: 0
-    y:
-      scale: 0
-      value: 0
-    width:
-      scale: 0
-      value: 0
-    height:
-      scale: 0
-      value: 0
-    minPixelWidth: 0
-    minPixelHeight: 0
-  broadcastToChildren: 1
-  actorTransform: {fileID: 0}
-  onSelectedUsable:
-    m_PersistentCalls:
-      m_Calls: []
-  onDeselectedUsable:
-    m_PersistentCalls:
-      m_Calls: []
-  usablesInRange: []
 --- !u!114 &376092232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6269,7 +6169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &630975885
 Transform:
   m_ObjectHideFlags: 0
@@ -6824,7 +6724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &775102666
 Transform:
   m_ObjectHideFlags: 0
@@ -6908,7 +6808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &862691792
 Transform:
   m_ObjectHideFlags: 0
@@ -7230,7 +7130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1137103140
 Transform:
   m_ObjectHideFlags: 0
@@ -7522,7 +7422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1321915172
 Transform:
   m_ObjectHideFlags: 0
@@ -7685,6 +7585,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6335994825234722892, guid: a1b06f504f1076b478122c5f4088d291, type: 3}
+      propertyPath: selectAt
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335994825234722892, guid: a1b06f504f1076b478122c5f4088d291, type: 3}
       propertyPath: raycastAll
       value: 0
       objectReference: {fileID: 0}
@@ -7756,7 +7660,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6335994825234722892, guid: a1b06f504f1076b478122c5f4088d291, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a1b06f504f1076b478122c5f4088d291, type: 3}
 --- !u!1 &1536411813
@@ -8202,7 +8107,6 @@ Transform:
   - {fileID: 1232857567645035654}
   - {fileID: 3068100988679916743}
   - {fileID: 8179045284799349964}
-  - {fileID: 8281206306288104676}
   - {fileID: 7365125359611076710}
   - {fileID: 332568194}
   - {fileID: 14813115}
@@ -8213,6 +8117,7 @@ Transform:
   - {fileID: 862691792}
   - {fileID: 723528772}
   - {fileID: 1578807659}
+  - {fileID: 8281206306288104676}
   - {fileID: 775102666}
   - {fileID: 1321915172}
   - {fileID: 1137103140}
@@ -8595,6 +8500,61 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7db5c3d73f6aa3242a49a69102300778, type: 3}
+--- !u!1 &2066850636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6335994825234723762, guid: a1b06f504f1076b478122c5f4088d291, type: 3}
+  m_PrefabInstance: {fileID: 1396102120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2066850644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066850636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624654ff0a68ee844994f728ddf3d991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectAt: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  distanceFrom: 1
+  maxSelectionDistance: 15
+  runRaycasts: 1
+  raycastAll: 1
+  selectBehindUIObjects: 0
+  useDefaultGUI: 1
+  guiSkin: {fileID: 0}
+  guiStyleName: label
+  alignment: 1
+  textStyle: 1
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  inRangeColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outOfRangeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  reticle:
+    inRange: {fileID: 2800000, guid: ead3fd45dba6a1c4a8cf5d6238b62307, type: 3}
+    outOfRange: {fileID: 2800000, guid: ead3fd45dba6a1c4a8cf5d6238b62307, type: 3}
+    width: 64
+    height: 64
+  useKey: 32
+  useButton: Fire2
+  m_defaultUseMessage: (spacebar to interact)
+  broadcastToChildren: 1
+  actorTransform: {fileID: 0}
+  tooFarMessage: too far
+  onSelectedUsable:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselectedUsable:
+    m_PersistentCalls:
+      m_Calls: []
+  tooFarEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  debug: 1
 --- !u!4 &2131471282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4472791952732136056, guid: a6791e6f57fce4d409e13ca83e20604b, type: 3}
@@ -9175,7 +9135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &3904613877004214729
 MeshRenderer:
   m_ObjectHideFlags: 0
