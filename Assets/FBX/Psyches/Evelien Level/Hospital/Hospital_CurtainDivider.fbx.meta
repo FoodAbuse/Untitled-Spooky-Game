@@ -3,7 +3,17 @@ guid: a7c1d02a7bc03974482f36193436a98d
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Curtains
+    second: {fileID: 2100000, guid: 9382b01d71a77b740915f8ff1927ccc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Matress
+    second: {fileID: 2100000, guid: f87d24567c1c5744fa7803b43d72184a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -89,7 +99,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.0112
+    globalScale: 1.12
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
