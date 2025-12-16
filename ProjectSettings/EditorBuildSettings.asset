@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/John Test/John Scene Loading/SceneLoadingNew.unity
     guid: ea72e0a8bb1af404b8d0eb1f086d8896
+  - enabled: 1
+    path: Assets/Scenes/Lily Art Testing/Bedroom Testing Scene/Toska Bedroom 2.unity
+    guid: 312f1e8061e648c4c8358b1a3f2db51f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 27a2e125267d04948833b53f509d8860, type: 2}
