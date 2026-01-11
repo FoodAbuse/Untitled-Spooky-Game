@@ -11,6 +11,8 @@ public class CameraTripwire : MonoBehaviour
     private GameObject toEnable;
     [SerializeField]
     private GameObject toDisable;
+    [SerializeField]
+    private GameObject cameraMovementVector;
 
     void Start()
     {
@@ -49,6 +51,16 @@ public class CameraTripwire : MonoBehaviour
 
             }
 
+            if(cameraMovementVector!=null)
+            {
+                other.GetComponent<HugoMovementTests>().PassCamOrentation(cameraMovementVector.transform);
+            }
+            else
+            {
+                Debug.Log("!!WARNING!! - No assigned vector for transfer for camera '" + boundCamera.name + "'. using cameras native vector");
+                other.GetComponent<HugoMovementTests>().PassCamOrentation(boundCamera.transform);
+            }
+            
             
             gameObject.SetActive(false);
         }

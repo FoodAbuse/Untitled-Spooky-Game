@@ -84,6 +84,18 @@ public class HugoMovementTests : MonoBehaviour
     private int layer_mask;
     public CameraTriggerZone currentCamZone;
 
+    [SerializeField]
+    private bool pendingNewMoveVector;
+    [SerializeField]
+    private Transform pendingTransform;
+    [SerializeField]
+    private Transform currentTransform;
+    [SerializeField]
+    private Transform nativeCamTransform;
+
+    [SerializeField]
+    private bool enableCamBasedMovement;
+
 
     [SerializeField]
     private enum AnimationState{IndoorSleepy = 0, Indoor = 1, Outdoor = 2}
@@ -103,6 +115,8 @@ public class HugoMovementTests : MonoBehaviour
 
     void Start() 
     {
+        currentTransform = Camera.main.transform;
+        nativeCamTransform = currentTransform;
         layer_mask = LayerMask.GetMask("Interactable");
         MainCamera = Camera.main;
         rb = gameObject.GetComponent<Rigidbody>();
@@ -126,9 +140,19 @@ public class HugoMovementTests : MonoBehaviour
 
             moveDirection = new Vector3(playerControls.ReadValue<Vector2>().x, 0, playerControls.ReadValue<Vector2>().y);
 
+            if (pendingNewMoveVector && moveDirection.x==0 && moveDirection.z==0)
+            {
+                Debug.Log("Input Keys Released");
+                currentTransform = pendingTransform;
+                if(!enableCamBasedMovement)
+                {
+                    enableCamBasedMovement = true;
+                }
+                nativeCamTransform = currentTransform;
+                pendingNewMoveVector = false;
+            }
 
-
-            if (playerControls.ReadValue<Vector2>().x != 0 || playerControls.ReadValue<Vector2>().y != 0)
+                if (playerControls.ReadValue<Vector2>().x != 0 || playerControls.ReadValue<Vector2>().y != 0)
             {
                 float speedMultiplier = 1f;
                 float targetSpeed = 1f;
@@ -167,15 +191,58 @@ public class HugoMovementTests : MonoBehaviour
                 gameObject.GetComponentInChildren<Animator>().SetBool("IsSprinting", false);
             }
             //moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
-            
-            //transform.position += moveDirection * movementSpeed * Time.deltaTime;
-            transform.Translate(moveDirection * activeSpeed * Time.deltaTime, Space.World);
 
+            //transform.position += moveDirection * movementSpeed * Time.deltaTime;
+
+            // input for translation
+            float horInput = playerControls.ReadValue<Vector2>().x;
+            float verInput = playerControls.ReadValue<Vector2>().y;
+
+            // camera direction
+            Vector3 camForward = nativeCamTransform.forward;
+            Vector3 camRight = nativeCamTransform.right;
+            camForward.y = 0;
+            camRight.y = 0;
+
+            //creating relative camera direction
+            Vector3 forwardRelative = verInput * camForward;
+            Vector3 rightRelative = horInput * camRight;
+
+            Vector3 cameraOrientedMove = forwardRelative + rightRelative;
+
+            //world based movement
+            if (!enableCamBasedMovement)
+            {
+                transform.Translate(moveDirection * activeSpeed * Time.deltaTime, Space.World);
+
+                if (moveDirection != Vector3.zero)
+                {
+                    Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+                }
+            }
+                
+            else //camera based movement
+            {
+                transform.Translate(cameraOrientedMove * activeSpeed * Time.deltaTime, Space.World);
+
+
+                if (moveDirection != Vector3.zero)
+                {
+                    Quaternion toOffsetRotation = Quaternion.LookRotation(cameraOrientedMove, Vector3.up);
+                    transform.rotation = Quaternion.RotateTowards(transform.rotation, toOffsetRotation, rotationSpeed * Time.deltaTime);
+                }
+            }
+                
+
+
+            /*
             if (moveDirection != Vector3.zero)
             {
                 Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
             }
+            */
         }
         if (activeSpeed != 0)
         {
@@ -253,6 +320,12 @@ public class HugoMovementTests : MonoBehaviour
     public void PassCamZone(CameraTriggerZone zone)
     {
         currentCamZone = zone;
+    }
+
+    public void PassCamOrentation(Transform relativeTrans)
+    {
+        pendingNewMoveVector = true;
+        pendingTransform = relativeTrans;
     }
 
     public void SwapAnimState(int index)
