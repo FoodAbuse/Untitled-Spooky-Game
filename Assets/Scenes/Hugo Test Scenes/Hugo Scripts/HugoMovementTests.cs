@@ -82,6 +82,7 @@ public class HugoMovementTests : MonoBehaviour
     [SerializeField]
     private List<HugoInteractable> interactablesInRange;
     private int layer_mask;
+    public CameraTriggerZone currentCamZone;
 
 
     [SerializeField]
@@ -247,6 +248,11 @@ public class HugoMovementTests : MonoBehaviour
     private void VerifyNextStare()
     {
         
+    }
+
+    public void PassCamZone(CameraTriggerZone zone)
+    {
+        currentCamZone = zone;
     }
 
     public void SwapAnimState(int index)

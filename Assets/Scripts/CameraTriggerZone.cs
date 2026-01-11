@@ -15,9 +15,22 @@ public class CameraTriggerZone : MonoBehaviour
 
     [SerializeField]
     private GameObject previousCamera;
+    [SerializeField]
+    private GameObject defaultCamera;
+
+    public bool overrideExitCondition;
+    public bool isTripwire;
+    [SerializeField]
+    private GameObject[] objectsToEnable;
+    [SerializeField]
+    private GameObject[] objectsToDisable;
+    
+
+
 
     void Start()
     {
+        overrideExitCondition = false;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         if(boundCamera == null)
         {
@@ -28,19 +41,55 @@ public class CameraTriggerZone : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag==("Player"))
-        {            
-            if(zoneTriggerType==triggeredCameraType.StaticZone)
+        {   
+            /*
+            if (other.GetComponent<HugoMovementTests>().currentCamZone!=null)
+            {
+                //other.GetComponent<HugoMovementTests>().currentCamZone.GetComponent<CameraTriggerZone>().overrideExitCondition = true;
+                other.GetComponent<HugoMovementTests>().PassCamZone(this);
+                
+            }
+            else
+                other.GetComponent<HugoMovementTests>().PassCamZone(this);
+            */
+            if (zoneTriggerType==triggeredCameraType.StaticZone)
             {
                 previousCamera = Camera.main.gameObject;
+                boundCamera.gameObject.SetActive(true);
+                boundCamera.SetMainCamera();
             }
-            boundCamera.gameObject.SetActive(true);
-            boundCamera.SetMainCamera();
+            if (zoneTriggerType==triggeredCameraType.Default)
+            {
+                defaultCamera.SetActive(true);
+                boundCamera.gameObject.tag = "Untagged";
+                defaultCamera.gameObject.tag = "MainCamera";
+                boundCamera.gameObject.SetActive(false);
+
+            }
+            
+
+            if (objectsToEnable!=null)
+            {
+                foreach (GameObject g in objectsToEnable)
+                {
+                    g.SetActive(true);
+                }
+            }
+            
+            if (objectsToDisable!=null)
+            { 
+                foreach(GameObject g in objectsToDisable)
+                {
+                    g.SetActive(false);
+                }
+            }
+            gameObject.SetActive(false);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(zoneTriggerType == triggeredCameraType.StaticZone)
+        if(zoneTriggerType == triggeredCameraType.StaticZone && overrideExitCondition==false)
         {
             boundCamera.gameObject.SetActive(false);
             previousCamera.SetActive(true);
