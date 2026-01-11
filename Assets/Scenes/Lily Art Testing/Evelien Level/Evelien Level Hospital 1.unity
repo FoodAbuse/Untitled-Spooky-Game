@@ -9784,6 +9784,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2718947334106365945, guid: 4c51fbc8ada1a6645bc249f5868b27e1, type: 3}
+      propertyPath: sceneIndex
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2718947334106365946, guid: 4c51fbc8ada1a6645bc249f5868b27e1, type: 3}
       propertyPath: m_Name
       value: SceneTransitionZone
