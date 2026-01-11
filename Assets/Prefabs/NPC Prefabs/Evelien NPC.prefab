@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612332045088443283}
   m_LocalRotation: {x: -0.71478534, y: 0, z: 0, w: 0.6993439}
-  m_LocalPosition: {x: -0, y: 0.40149513, z: 0.0068805157}
+  m_LocalPosition: {x: 0, y: 0.40149513, z: 0.006880516}
   m_LocalScale: {x: 100, y: 100.00001, z: 100.00001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3889838066656406221}
   m_LocalRotation: {x: -0.71478534, y: 0, z: 0, w: 0.6993439}
-  m_LocalPosition: {x: -0, y: 0.40149513, z: 0.0068805157}
+  m_LocalPosition: {x: 0, y: 0.40149513, z: 0.006880516}
   m_LocalScale: {x: 100, y: 100.00001, z: 100.00001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -192,8 +192,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4141326570364071392}
   m_LocalRotation: {x: -0.71478534, y: 0, z: 0, w: 0.6993439}
-  m_LocalPosition: {x: -0, y: 0.4014951, z: 0.0068805157}
-  m_LocalScale: {x: 100, y: 100.00001, z: 100.00001}
+  m_LocalPosition: {x: 0, y: 0.4014951, z: 0.006880516}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6651153425118271647}
@@ -358,7 +358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4863680846349765369}
   m_LocalRotation: {x: -0.71478534, y: 0, z: 0, w: 0.6993439}
-  m_LocalPosition: {x: -0, y: 0.4014951, z: 0.0068805157}
+  m_LocalPosition: {x: 0, y: 0.4014951, z: 0.006880516}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -441,7 +441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6160017468980092270}
   m_LocalRotation: {x: -0.71478534, y: 0, z: 0, w: 0.6993439}
-  m_LocalPosition: {x: -0, y: 0.4014951, z: 0.0068805157}
+  m_LocalPosition: {x: 0, y: 0.4014951, z: 0.006880516}
   m_LocalScale: {x: 100, y: 100.00001, z: 100.00001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -512,7 +512,6 @@ GameObject:
   - component: {fileID: 6613287221656125292}
   - component: {fileID: 6613287220582158355}
   - component: {fileID: 6613287221656125298}
-  - component: {fileID: 6613287221656125299}
   - component: {fileID: 6613287221656125296}
   - component: {fileID: 6613287221656125297}
   - component: {fileID: 6613287221656125294}
@@ -530,7 +529,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6270827493678924325}
-  m_LocalRotation: {x: -0, y: -0.8243002, z: -0, w: 0.566153}
+  m_LocalRotation: {x: 0, y: -0.82429916, z: 0, w: 0.56615454}
   m_LocalPosition: {x: 5.6801696, y: 1.9959488, z: -6.095001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -572,8 +571,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.6309714
-  m_Center: {x: 0, y: -2.4695697, z: 0}
+  m_Radius: 0.8653381
+  m_Center: {x: 0, y: 0.2540148, z: 0}
 --- !u!65 &6613287221656125292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -621,55 +620,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagSpecificElements: []
   layerSpecificElements: []
---- !u!114 &6613287221656125299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6270827493678924325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 963d6358c55a0f44d8de57bee560f184, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useDefaultGUI: 1
-  guiSkin: {fileID: 0}
-  guiStyleName: label
-  alignment: 1
-  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  textStyle: 1
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  m_defaultUseMessage: press "E" to talk
-  useKey: 101
-  useButton: Fire2
-  enableTouch: 0
-  touchArea:
-    origin: 0
-    alignment: 0
-    x:
-      scale: 0
-      value: 0
-    y:
-      scale: 0
-      value: 0
-    width:
-      scale: 0
-      value: 0
-    height:
-      scale: 0
-      value: 0
-    minPixelWidth: 0
-    minPixelHeight: 0
-  broadcastToChildren: 1
-  actorTransform: {fileID: 0}
-  onSelectedUsable:
-    m_PersistentCalls:
-      m_Calls: []
-  onDeselectedUsable:
-    m_PersistentCalls:
-      m_Calls: []
-  usablesInRange: []
 --- !u!114 &6613287221656125296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,7 +729,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: First Library Conversation
+  conversation: Evelien Hospital Room 1
   conversationConversant: {fileID: 6651153425118271647}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1

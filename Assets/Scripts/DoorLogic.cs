@@ -32,7 +32,10 @@ public class DoorLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        videoPlayer.Pause();
+        if(videoPlayer != null)
+        {
+            videoPlayer.Pause();
+        }
         videoLength = 1f;
     }
 
@@ -55,7 +58,8 @@ public class DoorLogic : MonoBehaviour
 
         if (!isVideoPlaying)
         {
-            videoPlayer.Play();
+            if(videoPlayer != null)
+                videoPlayer.Play();
             StartCoroutine(UIFadeSequence());
         }
             

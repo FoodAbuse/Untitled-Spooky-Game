@@ -6,16 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 92a484d87ac557547b8cba55afd2daea
+    path: Assets/Scenes/Hugo Test Scenes/Doors Test.unity
+    guid: 68dce4a035a0ed84c9bd8882e41f3198
   - enabled: 1
-    path: Assets/Scenes/Hugo Test Scenes/3rd Person Variations.unity
-    guid: 026fe3e168b181e4d85c58d16a90345d
+    path: Assets/Scenes/Lily Art Testing/Evelien Level/Evelien Library Lvl 1.unity
+    guid: 66b780715a7ec7a4fb337c66f63f392e
   - enabled: 1
-    path: Assets/Scenes/John Test/John Scene Loading/SceneLoadingNew.unity
-    guid: ea72e0a8bb1af404b8d0eb1f086d8896
-  - enabled: 1
-    path: Assets/Scenes/Lily Art Testing/Bedroom Testing Scene/Toska Bedroom 2.unity
-    guid: 312f1e8061e648c4c8358b1a3f2db51f
+    path: Assets/Scenes/Lily Art Testing/Evelien Level/Evelien Level Hospital 1.unity
+    guid: ab59a79fd6ce0ee43a8c441a53387570
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 27a2e125267d04948833b53f509d8860, type: 2}

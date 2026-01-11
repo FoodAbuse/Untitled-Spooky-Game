@@ -175,6 +175,9 @@ MonoBehaviour:
   usesTrigger: 0
   loadsScene: 0
   sceneIndex: 0
+  UICanvasGroup: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  doorOpening: {fileID: 0}
 --- !u!135 &76590375
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -800,6 +803,9 @@ MonoBehaviour:
   usesTrigger: 0
   loadsScene: 1
   sceneIndex: 0
+  UICanvasGroup: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  doorOpening: {fileID: 0}
 --- !u!135 &1098760963
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1093,6 +1099,9 @@ MonoBehaviour:
   usesTrigger: 0
   loadsScene: 1
   sceneIndex: 1
+  UICanvasGroup: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  doorOpening: {fileID: 0}
 --- !u!135 &1368838551
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1326,7 +1335,10 @@ MonoBehaviour:
   definedPlayerSpawn: {fileID: 2140592025}
   usesTrigger: 0
   loadsScene: 1
-  sceneIndex: 2
+  sceneIndex: 0
+  UICanvasGroup: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  doorOpening: {fileID: 0}
 --- !u!135 &1943632787
 SphereCollider:
   m_ObjectHideFlags: 0
