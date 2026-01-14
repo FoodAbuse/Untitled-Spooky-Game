@@ -23,7 +23,13 @@ public class DoorLogic : MonoBehaviour
     private VideoPlayer videoPlayer;
 
     private bool isVideoPlaying;
-    private float videoLength;
+
+    [SerializeField]
+    private bool useCustomClipLength;
+    [SerializeField]
+    private float videoLength = 1f;
+
+    private GameObject playerRef;
 
 
     //audio
@@ -35,8 +41,13 @@ public class DoorLogic : MonoBehaviour
         if(videoPlayer != null)
         {
             videoPlayer.Pause();
+            if((videoPlayer.isPrepared || videoPlayer.clip!= null) && !useCustomClipLength)
+            {
+                double l = videoPlayer.length;
+                videoLength = 0+(float)l; //inspects clip length, converts output back to float
+            }
         }
-        videoLength = 1f;
+        //videoLength = 1f;
     }
 
     private void OnTriggerEnter(Collider col)
@@ -47,6 +58,9 @@ public class DoorLogic : MonoBehaviour
         HugoMovementTests p = col.GetComponent<HugoMovementTests>();
         if (col.tag == "Player" && p != null && colliderTrigger && usesTrigger)
         {
+            playerRef = col.gameObject;
+
+            /*
             if (loadsScene)
             {
                 SceneManager.LoadScene(sceneIndex);
@@ -54,52 +68,74 @@ public class DoorLogic : MonoBehaviour
             }
             else
                 definedPlayerSpawn.TeleportPlayer(col.gameObject);
-        }
+            */
+            if (!isVideoPlaying)
+            {
+                if (videoPlayer != null)
+                {
+                    videoPlayer.Play();
+                    StartCoroutine(UIFadeSequence());
+                }
+                else
+                {
+                    Debug.Log("Warning: No video was played for the door '" + gameObject.name + "' because no video player element has been assigned. Skipping door anim and using door logic script");
+                    UseDoor(playerRef);
+                }
+                    
 
-        if (!isVideoPlaying)
-        {
-            if(videoPlayer != null)
-                videoPlayer.Play();
-            StartCoroutine(UIFadeSequence());
-        }
-            
-
+                /*
+                if (videoPlayer != null)
+                    videoPlayer.Play();
+                StartCoroutine(UIFadeSequence());
+                */
+            }
+        } 
     }
 
     private IEnumerator UIFadeSequence()
     {
         isVideoPlaying = true;
 
-        UICanvasGroup.alpha = 0f;
-
-        float time = 0f;
-        while (time < 1f)
+        if(UICanvasGroup!=null)
         {
-            time += Time.deltaTime;
-            UICanvasGroup.alpha = Mathf.Clamp01(time / 1f);
-            yield return null;
+            UICanvasGroup.alpha = 0f;
+
+            float time = 0f;
+            while (time < 1f)
+            {
+                time += Time.deltaTime;
+                UICanvasGroup.alpha = Mathf.Clamp01(time / 1f);
+                yield return null;
+            }
+
+            doorOpening.Play();
+
+            yield return new WaitForSeconds(videoLength);
+
+
+            UseDoor(playerRef);
+            //scene loading code here........
+            //SceneManager.LoadScene(sceneIndex);
+
+            /*
+            time = 0f;
+            while (time < 1f)
+            {
+                time += Time.deltaTime;
+                UICanvasGroup.alpha = Mathf.Clamp01(1f - (time / 1f));
+                yield return null;
+            }
+
+            UICanvasGroup.alpha = 0f;
+
+            isVideoPlaying = false;
+            */
+        }
+        else
+        {
+            Debug.LogWarning("WARNING - You have not assigned a UI Canvas Group element for the door '"+gameObject.name+"'. Scene loading has failed as a result");
         }
 
-        doorOpening.Play();
-
-        yield return new WaitForSeconds(videoLength);
-
-        //scene loading code here........
-        SceneManager.LoadScene(2);
-        
-        /*
-        time = 0f;
-        while (time < 1f)
-        {
-            time += Time.deltaTime;
-            UICanvasGroup.alpha = Mathf.Clamp01(1f - (time / 1f));
-            yield return null;
-        }
-
-        UICanvasGroup.alpha = 0f;
-
-        isVideoPlaying = false;
-        */
     }
 
     

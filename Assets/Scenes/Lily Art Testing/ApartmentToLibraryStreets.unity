@@ -6994,6 +6994,10 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 135100772}
+    - target: {fileID: 8885006232934442142, guid: 7424f75680fc71042af1630fc87a1bb2, type: 3}
+      propertyPath: cameraVerticalSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7424f75680fc71042af1630fc87a1bb2, type: 3}

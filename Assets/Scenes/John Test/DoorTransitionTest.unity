@@ -729,13 +729,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44d6c120e11b604abe55e9b106add9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderTrigger: 0
+  colliderTrigger: 1
   definedPlayerSpawn: {fileID: 0}
-  usesTrigger: 0
-  loadsScene: 0
-  sceneIndex: 0
+  usesTrigger: 1
+  loadsScene: 1
+  sceneIndex: 2
   UICanvasGroup: {fileID: 709425937}
   videoPlayer: {fileID: 1320766280}
+  useCustomClipLength: 1
+  videoLength: 1
   doorOpening: {fileID: 1115580893}
 --- !u!4 &1175709200 stripped
 Transform:
