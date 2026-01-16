@@ -1947,6 +1947,10 @@ MonoBehaviour:
   cameraTransform: {fileID: 204562878}
   cameraRotationTransform: {fileID: 204562878}
   cameraSwivelSpeed: 1
+  cameraVerticalSpeed: 1
+  verticalOffset: 0
+  playerStartingPos: {x: 0, y: 0, z: 0}
+  cameraStartingPos: {x: 0, y: 0, z: 0}
 --- !u!1 &211592494
 GameObject:
   m_ObjectHideFlags: 0
@@ -23210,8 +23214,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677018880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.23, y: 0, z: 29.346}
-  m_LocalScale: {x: 3.3604958, y: 3, z: 0.8068531}
+  m_LocalPosition: {x: -6.23, y: 0, z: 30.276}
+  m_LocalScale: {x: 3.3604958, y: 3, z: 0.07673334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 750291173}
@@ -30833,8 +30837,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6584390365603977042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.23, y: 0, z: 31.54}
-  m_LocalScale: {x: 3.3604958, y: 3, z: 0.8068531}
+  m_LocalPosition: {x: -6.23, y: 0, z: 31.05}
+  m_LocalScale: {x: 3.3604958, y: 3, z: 0.062369745}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 750291173}
