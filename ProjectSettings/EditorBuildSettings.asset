@@ -6,25 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Lily Art Testing/ApartmentScene.unity
-    guid: 89a29ba85f5a06a42a64e7d030c32093
-  - enabled: 1
-    path: Assets/Scenes/Lily Art Testing/ApartmentToLibraryStreets.unity
-    guid: fd382cbdc8f0d08499d0169608c2d5a2
-  - enabled: 1
-    path: Assets/Scenes/Lily Art Testing/Evelien Level/Evelien Library Lvl 1.unity
-    guid: 66b780715a7ec7a4fb337c66f63f392e
-  - enabled: 1
-    path: Assets/Scenes/Lily Art Testing/Evelien Level/Evelien Level Hospital 1.unity
-    guid: ab59a79fd6ce0ee43a8c441a53387570
-  - enabled: 1
-    path: Assets/Scenes/Lily Art Testing/Evelien Level/Evelien Spooky Library 1.unity
-    guid: 65fa50dfcc0e9534fa1ca01b9f2c0eb8
-  - enabled: 1
-    path: Assets/Scenes/Lily Art Testing/Evelien Level/Evelien Bedroom 1.unity
-    guid: b97aee7c22c9faa4ba27a76af1989e49
-  - enabled: 1
     path: Assets/Scenes/John Test/JohnMainMenu.unity
     guid: 0e2210b51e645e5488debb50e924c698
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/ApartmentScene.unity
+    guid: 89a29ba85f5a06a42a64e7d030c32093
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/ApartmentToLibraryStreets.unity
+    guid: fd382cbdc8f0d08499d0169608c2d5a2
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Library Lvl 1.unity
+    guid: 66b780715a7ec7a4fb337c66f63f392e
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level Hospital 1.unity
+    guid: ab59a79fd6ce0ee43a8c441a53387570
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Spooky Library 1.unity
+    guid: 65fa50dfcc0e9534fa1ca01b9f2c0eb8
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Bedroom 1.unity
+    guid: b97aee7c22c9faa4ba27a76af1989e49
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 27a2e125267d04948833b53f509d8860, type: 2}
