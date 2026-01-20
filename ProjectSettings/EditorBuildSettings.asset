@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/John Test/JohnMainMenu.unity
-    guid: 0e2210b51e645e5488debb50e924c698
+    path: Assets/Scenes/Lily Scenes/JohnMainMenu lilycopy.unity
+    guid: 681243d403a044a41b5df084cce15e23
   - enabled: 1
     path: Assets/Scenes/Lily Scenes/ApartmentScene.unity
     guid: 89a29ba85f5a06a42a64e7d030c32093
@@ -15,16 +15,52 @@ EditorBuildSettings:
     path: Assets/Scenes/Lily Scenes/ApartmentToLibraryStreets.unity
     guid: fd382cbdc8f0d08499d0169608c2d5a2
   - enabled: 1
-    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Library Lvl 1.unity
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 1 - Aethernet
+      Library.unity
     guid: 66b780715a7ec7a4fb337c66f63f392e
   - enabled: 1
-    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level Hospital 1.unity
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 2 - Hospital
+      I.unity
     guid: ab59a79fd6ce0ee43a8c441a53387570
   - enabled: 1
-    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Spooky Library 1.unity
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 3 - Scary
+      Library I.unity
     guid: 65fa50dfcc0e9534fa1ca01b9f2c0eb8
   - enabled: 1
-    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Bedroom 1.unity
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 4 - Bedroom
+      I.unity
     guid: b97aee7c22c9faa4ba27a76af1989e49
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 5 - Library
+      Memory I.unity
+    guid: 33dfa3ebd0ab66d45b280d57a24964b1
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 7 - Bedroom
+      II.unity
+    guid: d83d374af0d137745b7415b7449c440c
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 8 - Scary
+      Library II.unity
+    guid: b1f1db42f8c624e4ca117c6701ab94c8
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 9 - Library
+      Memory II.unity
+    guid: b67ba93b4ecd5fe4eb8d9e5b5e1f4938
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 10 - Home.unity
+    guid: 678a99f9046f0b64d9d36f849ba6ddbe
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 11 - Hospital
+      II.unity
+    guid: dd48db4e3685acc49b3e701a0a4c73cd
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 12 - BossFight.unity
+    guid: 15bf98406f6c27d4b9402026b262b5f9
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/Evelien Level/Evelien Level - Part 13 - End.unity
+    guid: 9f2b7182e4c836743b4026582c97c41f
+  - enabled: 1
+    path: Assets/Scenes/Lily Scenes/3D Object Testing Scene/Graveyard.unity
+    guid: 1d1eb92196efd1e4c864af02eede5fcb
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 27a2e125267d04948833b53f509d8860, type: 2}

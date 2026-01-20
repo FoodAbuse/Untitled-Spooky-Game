@@ -729,7 +729,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Evelien Hospital Room 1
+  conversation: Evelien Box of Shame
   conversationConversant: {fileID: 6651153425118271647}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
