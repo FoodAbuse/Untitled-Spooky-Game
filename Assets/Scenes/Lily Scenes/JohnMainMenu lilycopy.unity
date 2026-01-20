@@ -341,7 +341,7 @@ RectTransform:
   m_GameObject: {fileID: 329180185}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.72597, y: 0.72597, z: 0.72597}
+  m_LocalScale: {x: 2.2918146, y: 2.2918146, z: 2.2918146}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 478797580}
@@ -350,8 +350,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187, y: 53}
-  m_SizeDelta: {x: 400, y: 106.3}
+  m_AnchoredPosition: {x: -27, y: -5}
+  m_SizeDelta: {x: 400, y: 59.6298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &329180187
 MonoBehaviour:
@@ -449,14 +449,14 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 432154701}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: NextLevel
-        m_Mode: 1
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: ApartmentScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &329180189
@@ -12334,7 +12334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &989808193
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12344,7 +12344,7 @@ RectTransform:
   m_GameObject: {fileID: 989808192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.72597, y: 0.72597, z: 0.72597}
+  m_LocalScale: {x: 2.2918146, y: 2.2918146, z: 2.2918146}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 924700328}
@@ -12353,7 +12353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187, y: -47}
+  m_AnchoredPosition: {x: -187, y: -256}
   m_SizeDelta: {x: 400, y: 106.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989808194
@@ -17918,7 +17918,7 @@ RectTransform:
   m_GameObject: {fileID: 1411124264}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3153178, y: 0.3153178, z: 0.3153178}
+  m_LocalScale: {x: 0.9954268, y: 0.9954268, z: 0.9954268}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 720925292}
@@ -18720,7 +18720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1778237587
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18730,7 +18730,7 @@ RectTransform:
   m_GameObject: {fileID: 1778237586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.72597, y: 0.72597, z: 0.72597}
+  m_LocalScale: {x: 2.2918146, y: 2.2918146, z: 2.2918146}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 889392716}
@@ -18739,8 +18739,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187, y: 0}
-  m_SizeDelta: {x: 400, y: 106.3}
+  m_AnchoredPosition: {x: -187, y: 60.90497}
+  m_SizeDelta: {x: 400, y: 53.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1778237588
 MonoBehaviour:
@@ -18869,7 +18869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1798759044
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18879,7 +18879,7 @@ RectTransform:
   m_GameObject: {fileID: 1798759043}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.72597, y: 0.72597, z: 0.72597}
+  m_LocalScale: {x: 2.2918146, y: 2.2918146, z: 2.2918146}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 747924729}
@@ -18888,7 +18888,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187, y: -97}
+  m_AnchoredPosition: {x: -187, y: -445}
   m_SizeDelta: {x: 400, y: 106.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1798759045

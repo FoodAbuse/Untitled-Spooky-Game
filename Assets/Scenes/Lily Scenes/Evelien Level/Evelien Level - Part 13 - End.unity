@@ -5976,7 +5976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1079274248781159278, guid: 80b3a956015f55a4ebddea15a8a9022f, type: 3}
       propertyPath: sceneIndex
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -6501,7 +6501,7 @@ PrefabInstance:
     - target: {fileID: 8885006234362682059, guid: 7424f75680fc71042af1630fc87a1bb2, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 71e877929ceeab94e9548f58e35f30bd, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8885006234362682059, guid: 7424f75680fc71042af1630fc87a1bb2, type: 3}
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
       value: 0

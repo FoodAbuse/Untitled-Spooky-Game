@@ -7031,7 +7031,7 @@ PrefabInstance:
     - target: {fileID: 8885006234362682059, guid: 7424f75680fc71042af1630fc87a1bb2, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 71e877929ceeab94e9548f58e35f30bd, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8885006234362682059, guid: 7424f75680fc71042af1630fc87a1bb2, type: 3}
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
       value: 0
@@ -14325,6 +14325,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: db47e8528a2652845b1cbc8fbb4edc95, type: 3}
       propertyPath: m_Name
       value: Coworker Copy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345348015692239709, guid: db47e8528a2652845b1cbc8fbb4edc95, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.248
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345348015692239709, guid: db47e8528a2652845b1cbc8fbb4edc95, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.617
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345348015692239709, guid: db47e8528a2652845b1cbc8fbb4edc95, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.038
       objectReference: {fileID: 0}
     - target: {fileID: 3614240357455853447, guid: db47e8528a2652845b1cbc8fbb4edc95, type: 3}
       propertyPath: m_Materials.Array.data[0]
